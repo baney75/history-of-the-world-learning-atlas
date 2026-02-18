@@ -36,6 +36,18 @@ const itemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
+function resolveAssetUrl(url?: string): string | undefined {
+  if (!url) {
+    return undefined;
+  }
+
+  if (url.startsWith('/')) {
+    return `${import.meta.env.BASE_URL}${url.slice(1)}`;
+  }
+
+  return url;
+}
+
 export function PeriodDetail({
   period,
   onBack,
@@ -47,6 +59,7 @@ export function PeriodDetail({
   learningPrompt,
 }: PeriodDetailProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const imageSrc = resolveAssetUrl(period.imageUrl);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start'],
@@ -81,14 +94,14 @@ export function PeriodDetail({
         </div>
       </motion.div>
 
-      {period.imageUrl && (
+      {imageSrc && (
         <motion.div 
           variants={itemVariants} 
           style={{ y: imageY }}
           className="relative h-80 md:h-[28rem] rounded-3xl overflow-hidden"
         >
           <img
-            src={period.imageUrl}
+            src={imageSrc}
             alt={period.imageAlt || period.title}
             className="w-full h-[110%] object-cover -translate-y-[5%]"
             width={1200}
@@ -110,7 +123,7 @@ export function PeriodDetail({
         </motion.div>
       )}
 
-      {!period.imageUrl && (
+      {!imageSrc && (
         <motion.div variants={itemVariants}>
           <div className="space-y-3">
             <Badge variant="secondary" className="text-xs">

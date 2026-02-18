@@ -25,7 +25,21 @@ const cardVariants: Variants = {
   }),
 };
 
+function resolveAssetUrl(url?: string): string | undefined {
+  if (!url) {
+    return undefined;
+  }
+
+  if (url.startsWith('/')) {
+    return `${import.meta.env.BASE_URL}${url.slice(1)}`;
+  }
+
+  return url;
+}
+
 export function TimelineCard({ period, index, onSelect, isFeatured = false }: TimelineCardProps) {
+  const imageSrc = resolveAssetUrl(period.imageUrl);
+
   return (
     <motion.div
       variants={cardVariants}
@@ -53,10 +67,10 @@ export function TimelineCard({ period, index, onSelect, isFeatured = false }: Ti
         }}
         aria-label={`View details for ${period.title}`}
       >
-        {period.imageUrl && (
+        {imageSrc && (
           <div className={`relative overflow-hidden ${isFeatured ? 'h-56 md:h-64' : 'h-40'}`}>
             <img
-              src={period.imageUrl}
+              src={imageSrc}
               alt={period.imageAlt || period.title}
               className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
               width={1200}
