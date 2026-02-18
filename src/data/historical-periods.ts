@@ -1,4 +1,4 @@
-import type { HistoricalPeriod, HistoricalFigure } from '@/types/history';
+import type { HistoricalPeriod, HistoricalFigure, Source } from '@/types/history';
 
 export const biblicalFigures: HistoricalFigure[] = [
   {
@@ -114,7 +114,7 @@ export const philosophers: HistoricalFigure[] = [
   }
 ];
 
-export const historicalPeriods: HistoricalPeriod[] = [
+const baseHistoricalPeriods: HistoricalPeriod[] = [
   {
     id: 'creation',
     title: 'Creation',
@@ -853,6 +853,168 @@ export const historicalPeriods: HistoricalPeriod[] = [
     ]
   }
 ];
+
+const periodImageOverrides: Record<string, { imageUrl: string; imageAlt: string }> = {
+  'creation': {
+    imageUrl: '/images/periods/creation.jpg',
+    imageAlt: 'Michelangelo\'s Creation of Adam detail from the Sistine Chapel ceiling',
+  },
+  'ancient-near-east': {
+    imageUrl: '/images/periods/ancient-near-east.jpg',
+    imageAlt: 'Ishtar Gate relief artifact representing Ancient Near Eastern civilization',
+  },
+  'ancient-egypt': {
+    imageUrl: '/images/periods/ancient-egypt.jpg',
+    imageAlt: 'The Great Pyramid of Giza at the Giza necropolis in Egypt',
+  },
+  'patriarchal-era': {
+    imageUrl: '/images/periods/patriarchal-era.jpg',
+    imageAlt: 'Classical painting depicting Abraham from the patriarchal narratives',
+  },
+  'exodus-period': {
+    imageUrl: '/images/periods/exodus-period.jpg',
+    imageAlt: 'Rembrandt painting of Moses with the tablets of the Law',
+  },
+  'israelite-kingdom': {
+    imageUrl: '/images/periods/israelite-kingdom.jpg',
+    imageAlt: 'Scale model of Jerusalem and the Temple Mount in the Israelite kingdom period',
+  },
+  'greek-philosophy': {
+    imageUrl: '/images/periods/greek-philosophy.jpg',
+    imageAlt: 'Raphael\'s School of Athens fresco symbolizing classical Greek philosophy',
+  },
+  'roman-empire': {
+    imageUrl: '/images/periods/roman-empire.jpg',
+    imageAlt: 'View of the Roman Forum, a central site of the Roman Empire',
+  },
+  'life-of-christ': {
+    imageUrl: '/images/periods/life-of-christ.jpg',
+    imageAlt: 'Historic Christ Pantocrator icon from Saint Catherine\'s Monastery, Sinai',
+  },
+  'early-church': {
+    imageUrl: '/images/periods/early-church.jpg',
+    imageAlt: 'Pentecost fresco representing the outpouring of the Holy Spirit on the early church',
+  },
+  'church-fathers': {
+    imageUrl: '/images/periods/church-fathers.jpg',
+    imageAlt: 'Portrait of Augustine of Hippo, a major Church Father and theologian',
+  },
+  'constantinian-era': {
+    imageUrl: '/images/periods/constantinian-era.jpg',
+    imageAlt: 'Capitoline Museums statue of Emperor Constantine the Great',
+  },
+  'middle-ages': {
+    imageUrl: '/images/periods/middle-ages.jpg',
+    imageAlt: 'Chartres Cathedral, a landmark Gothic church from the medieval period',
+  },
+  'reformation': {
+    imageUrl: '/images/periods/reformation.jpg',
+    imageAlt: 'Lucas Cranach portrait of Martin Luther from the Reformation era',
+  },
+  'american-founding': {
+    imageUrl: '/images/periods/american-founding.jpg',
+    imageAlt: 'John Trumbull painting of the Declaration of Independence presentation',
+  },
+  'world-wars': {
+    imageUrl: '/images/periods/world-wars.jpg',
+    imageAlt: 'Normandy landing troops during World War II on June 6, 1944',
+  },
+  'cold-war': {
+    imageUrl: '/images/periods/cold-war.jpg',
+    imageAlt: 'Photograph of the Berlin Wall during the Cold War period',
+  },
+  'modern-era': {
+    imageUrl: '/images/periods/modern-era.jpg',
+    imageAlt: 'The Blue Marble Earth photograph representing the modern global era',
+  },
+};
+
+const periodSourceOverrides: Record<string, Source[]> = {
+  'creation': [
+    { title: 'Genesis 1 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Genesis%201&version=ESV', type: 'bible' },
+    { title: 'John 1:1-3 (ESV)', url: 'https://www.biblegateway.com/passage/?search=John%201%3A1-3&version=ESV', type: 'bible' },
+  ],
+  'ancient-near-east': [
+    { title: 'Ancient Near East', url: 'https://en.wikipedia.org/wiki/Ancient_Near_East', type: 'archaeological' },
+    { title: 'Genesis 11:1-9 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Genesis%2011%3A1-9&version=ESV', type: 'bible' },
+  ],
+  'ancient-egypt': [
+    { title: 'Ancient Egypt', url: 'https://en.wikipedia.org/wiki/Ancient_Egypt', type: 'archaeological' },
+    { title: 'Exodus 1-15 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Exodus%201-15&version=ESV', type: 'bible' },
+  ],
+  'patriarchal-era': [
+    { title: 'Patriarchal Age', url: 'https://en.wikipedia.org/wiki/Patriarchal_age', type: 'archaeological' },
+    { title: 'Genesis 12-50 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Genesis%2012-50&version=ESV', type: 'bible' },
+  ],
+  'exodus-period': [
+    { title: 'The Exodus', url: 'https://en.wikipedia.org/wiki/The_Exodus', type: 'archaeological' },
+    { title: 'Exodus 1-20 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Exodus%201-20&version=ESV', type: 'bible' },
+  ],
+  'israelite-kingdom': [
+    { title: 'Kingdom of Israel (United Monarchy)', url: 'https://en.wikipedia.org/wiki/Kingdom_of_Israel_(united_monarchy)', type: 'archaeological' },
+    { title: '2 Samuel 7 (ESV)', url: 'https://www.biblegateway.com/passage/?search=2%20Samuel%207&version=ESV', type: 'bible' },
+  ],
+  'greek-philosophy': [
+    { title: 'Ancient Greek Philosophy', url: 'https://en.wikipedia.org/wiki/Ancient_Greek_philosophy', type: 'archaeological' },
+    { title: 'Internet Encyclopedia: Ancient Greek Philosophy', url: 'https://iep.utm.edu/ancient-greek-philosophy/', type: 'archaeological' },
+  ],
+  'roman-empire': [
+    { title: 'Roman Empire', url: 'https://en.wikipedia.org/wiki/Roman_Empire', type: 'archaeological' },
+    { title: 'Galatians 4:4 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Galatians%204%3A4&version=ESV', type: 'bible' },
+  ],
+  'life-of-christ': [
+    { title: 'Life of Jesus', url: 'https://en.wikipedia.org/wiki/Life_of_Jesus', type: 'archaeological' },
+    { title: 'John 1:1-18 (ESV)', url: 'https://www.biblegateway.com/passage/?search=John%201%3A1-18&version=ESV', type: 'bible' },
+  ],
+  'early-church': [
+    { title: 'Early Christianity', url: 'https://en.wikipedia.org/wiki/Early_Christianity', type: 'archaeological' },
+    { title: 'Acts 2 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Acts%202&version=ESV', type: 'bible' },
+  ],
+  'church-fathers': [
+    { title: 'Church Fathers', url: 'https://en.wikipedia.org/wiki/Church_Fathers', type: 'archaeological' },
+    { title: 'Augustine of Hippo', url: 'https://en.wikipedia.org/wiki/Augustine_of_Hippo', type: 'archaeological' },
+  ],
+  'constantinian-era': [
+    { title: 'Constantine the Great', url: 'https://en.wikipedia.org/wiki/Constantine_the_Great', type: 'archaeological' },
+    { title: 'First Council of Nicaea', url: 'https://en.wikipedia.org/wiki/First_Council_of_Nicaea', type: 'archaeological' },
+  ],
+  'middle-ages': [
+    { title: 'Middle Ages', url: 'https://en.wikipedia.org/wiki/Middle_Ages', type: 'archaeological' },
+    { title: 'Chartres Cathedral', url: 'https://en.wikipedia.org/wiki/Chartres_Cathedral', type: 'archaeological' },
+  ],
+  'reformation': [
+    { title: 'Protestant Reformation', url: 'https://en.wikipedia.org/wiki/Reformation', type: 'archaeological' },
+    { title: 'Ninety-Five Theses', url: 'https://en.wikipedia.org/wiki/Ninety-five_Theses', type: 'archaeological' },
+  ],
+  'american-founding': [
+    { title: 'Declaration of Independence (Transcript)', url: 'https://www.archives.gov/founding-docs/declaration-transcript', type: 'archaeological' },
+    { title: 'Constitution (Transcript)', url: 'https://www.archives.gov/founding-docs/constitution-transcript', type: 'archaeological' },
+  ],
+  'world-wars': [
+    { title: 'World War I', url: 'https://en.wikipedia.org/wiki/World_War_I', type: 'archaeological' },
+    { title: 'World War II', url: 'https://en.wikipedia.org/wiki/World_War_II', type: 'archaeological' },
+  ],
+  'cold-war': [
+    { title: 'Cold War', url: 'https://en.wikipedia.org/wiki/Cold_War', type: 'archaeological' },
+    { title: 'Fall of the Berlin Wall', url: 'https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall', type: 'archaeological' },
+  ],
+  'modern-era': [
+    { title: '21st Century', url: 'https://en.wikipedia.org/wiki/21st_century', type: 'archaeological' },
+    { title: 'Revelation 22:20-21 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Revelation%2022%3A20-21&version=ESV', type: 'bible' },
+  ],
+};
+
+export const historicalPeriods: HistoricalPeriod[] = baseHistoricalPeriods.map((period) => {
+  const imageOverride = periodImageOverrides[period.id];
+  const sourceOverride = periodSourceOverrides[period.id];
+
+  return {
+    ...period,
+    imageUrl: imageOverride?.imageUrl ?? period.imageUrl,
+    imageAlt: imageOverride?.imageAlt ?? period.imageAlt,
+    sources: sourceOverride ?? period.sources,
+  };
+});
 
 export function getAllFigures(): HistoricalFigure[] {
   return [...biblicalFigures, ...philosophers];

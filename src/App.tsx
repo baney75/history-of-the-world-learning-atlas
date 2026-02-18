@@ -295,7 +295,7 @@ export default function App() {
               <h1 className="font-serif text-xl font-medium tracking-tight">History of the World</h1>
             </div>
             <div className="flex items-center gap-2">
-              <span className="caption text-muted-foreground hidden md:block">From Creation to Present</span>
+              <span className="caption text-muted-foreground hidden md:block">From Creation to the Present Age</span>
               <Button
                 variant={immersiveMode ? 'secondary' : 'outline'}
                 size="sm"
@@ -484,16 +484,7 @@ export default function App() {
         <footer className="border-t border-border/30 py-8 mt-auto">
           <div className="container px-6 text-center">
             <p className="text-xs text-muted-foreground">
-              Sourced from{' '}
-              <a
-                href="https://grokipedia-api.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline"
-              >
-                Grokipedia
-              </a>
-              . Scripture quotations from the Holy Bible.
+              Sourced from Scripture and direct historical references listed in each section.
             </p>
             <p className="text-xs text-muted-foreground mt-2 font-serif italic">Soli Deo Gloria</p>
           </div>
