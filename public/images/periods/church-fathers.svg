@@ -1,0 +1,26 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600' role='img' aria-label='Church Fathers'>
+  <defs>
+    <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#241f2d'/>
+      <stop offset='58%' stop-color='#51446b'/>
+      <stop offset='100%' stop-color='#d0c2e6'/>
+    </linearGradient>
+    <radialGradient id='glow' cx='50%' cy='44%' r='58%'>
+      <stop offset='0%' stop-color='rgba(255,255,255,0.22)'/>
+      <stop offset='100%' stop-color='rgba(255,255,255,0)'/>
+    </radialGradient>
+  </defs>
+  <rect width='1200' height='600' fill='url(#g)'/>
+  <rect width='1200' height='600' fill='url(#glow)'/>
+  <circle cx='180' cy='110' r='180' fill='rgba(255,255,255,0.06)'/>
+  <circle cx='1010' cy='520' r='210' fill='rgba(0,0,0,0.09)'/>
+  <g>
+<rect x='500' y='285' width='180' height='130' rx='8' fill='rgba(255,255,255,0.56)'/>
+<line x1='590' y1='285' x2='590' y2='415' stroke='rgba(81,68,107,0.55)' stroke-width='3'/>
+<path d='M700 300 L770 240 L752 330 Z' fill='rgba(255,255,255,0.52)'/>
+<line x1='735' y1='270' x2='680' y2='360' stroke='rgba(255,255,255,0.62)' stroke-width='5' stroke-linecap='round'/>
+        </g>
+  <rect x='38' y='38' width='1124' height='524' rx='30' fill='none' stroke='rgba(255,255,255,0.17)' stroke-width='2'/>
+  <text x='86' y='92' font-family='Georgia, serif' font-size='46' fill='rgba(255,255,255,0.88)' font-weight='700'>Church Fathers</text>
+  <text x='86' y='132' font-family='Georgia, serif' font-size='24' fill='rgba(255,255,255,0.75)'>Doctrine clarified and guarded.</text>
+</svg>

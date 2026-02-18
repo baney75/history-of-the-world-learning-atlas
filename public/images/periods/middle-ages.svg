@@ -1,0 +1,26 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600' role='img' aria-label='Middle Ages'>
+  <defs>
+    <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#1a2230'/>
+      <stop offset='58%' stop-color='#3a4f72'/>
+      <stop offset='100%' stop-color='#b8c5df'/>
+    </linearGradient>
+    <radialGradient id='glow' cx='50%' cy='44%' r='58%'>
+      <stop offset='0%' stop-color='rgba(255,255,255,0.22)'/>
+      <stop offset='100%' stop-color='rgba(255,255,255,0)'/>
+    </radialGradient>
+  </defs>
+  <rect width='1200' height='600' fill='url(#g)'/>
+  <rect width='1200' height='600' fill='url(#glow)'/>
+  <circle cx='180' cy='110' r='180' fill='rgba(255,255,255,0.06)'/>
+  <circle cx='1010' cy='520' r='210' fill='rgba(0,0,0,0.09)'/>
+  <g>
+<polygon points='500,420 560,300 620,420' fill='rgba(255,255,255,0.54)'/>
+<polygon points='580,420 650,260 720,420' fill='rgba(255,255,255,0.68)'/>
+<polygon points='660,420 710,320 760,420' fill='rgba(255,255,255,0.5)'/>
+<rect x='640' y='360' width='20' height='60' fill='rgba(58,79,114,0.45)'/>
+        </g>
+  <rect x='38' y='38' width='1124' height='524' rx='30' fill='none' stroke='rgba(255,255,255,0.17)' stroke-width='2'/>
+  <text x='86' y='92' font-family='Georgia, serif' font-size='46' fill='rgba(255,255,255,0.88)' font-weight='700'>Middle Ages</text>
+  <text x='86' y='132' font-family='Georgia, serif' font-size='24' fill='rgba(255,255,255,0.75)'>Christendom, cathedrals, and scholarship.</text>
+</svg>

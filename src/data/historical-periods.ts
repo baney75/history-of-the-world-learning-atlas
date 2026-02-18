@@ -124,8 +124,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Genesis 1-2; John 1:1-3; Colossians 1:16-17',
     quote: 'In the beginning, God created the heavens and the earth.',
     quoteSource: 'Genesis 1:1',
-    imageUrl: '/images/periods/creation.avif',
-    imageAlt: 'Soft light breaking through clouds at dawn',
+    imageUrl: '/images/periods/creation.svg',
+    imageAlt: 'Illustrated cosmic rings and dawn horizon representing Creation',
     keyFigures: [],
     keyEvents: [
       {
@@ -164,8 +164,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Genesis 2-11',
     quote: 'Come, let us build ourselves a city and a tower with its top in the heavens.',
     quoteSource: 'Genesis 11:4',
-    imageUrl: '/images/periods/ancient-near-east.avif',
-    imageAlt: 'Peaceful olive grove in soft morning light',
+    imageUrl: '/images/periods/ancient-near-east.svg',
+    imageAlt: 'Illustrated stepped ziggurat for Ancient Near Eastern civilization',
     keyFigures: [],
     keyEvents: [
       {
@@ -197,8 +197,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Genesis 37-50; Exodus 1-15',
     quote: 'Let my people go, that they may serve me.',
     quoteSource: 'Exodus 8:1',
-    imageUrl: '/images/periods/ancient-egypt.jpg',
-    imageAlt: 'Classical columns in warm soft light',
+    imageUrl: '/images/periods/ancient-egypt.svg',
+    imageAlt: 'Illustrated pyramids and desert sun for Ancient Egypt',
     keyFigures: [],
     keyEvents: [
       {
@@ -231,8 +231,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Genesis 12-50',
     quote: 'In you all the families of the earth shall be blessed.',
     quoteSource: 'Genesis 12:3',
-    imageUrl: '/images/periods/patriarchal-era.avif',
-    imageAlt: 'Misty rolling hills at sunrise',
+    imageUrl: '/images/periods/patriarchal-era.svg',
+    imageAlt: 'Illustrated desert tent under stars for the patriarchs',
     keyFigures: [biblicalFigures[0]],
     keyEvents: [
       {
@@ -272,8 +272,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Exodus - Deuteronomy',
     quote: 'I am the Lord your God, who brought you out of the land of Egypt, out of the house of slavery.',
     quoteSource: 'Exodus 20:2',
-    imageUrl: '/images/periods/exodus-period.avif',
-    imageAlt: 'Olive trees on a peaceful hillside',
+    imageUrl: '/images/periods/exodus-period.svg',
+    imageAlt: 'Illustrated parted waters and stone tablets for the Exodus',
     keyFigures: [biblicalFigures[1]],
     keyEvents: [
       {
@@ -315,8 +315,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: '1 Samuel - 2 Chronicles',
     quote: 'Your house and your kingdom shall be made sure forever before me. Your throne shall be established forever.',
     quoteSource: '2 Samuel 7:16',
-    imageUrl: '/images/periods/israelite-kingdom.avif',
-    imageAlt: 'Ancient stone church in soft morning light',
+    imageUrl: '/images/periods/israelite-kingdom.svg',
+    imageAlt: 'Illustrated crown and temple pillars for the Kingdom of Israel',
     keyFigures: [biblicalFigures[2], biblicalFigures[3]],
     keyEvents: [
       {
@@ -366,8 +366,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Acts 17:16-34; Romans 1:19-20',
     quote: 'The fear of the Lord is the beginning of wisdom, and the knowledge of the Holy One is insight.',
     quoteSource: 'Proverbs 9:10',
-    imageUrl: '/images/periods/greek-philosophy.avif',
-    imageAlt: 'Ancient library with soft shafts of light',
+    imageUrl: '/images/periods/greek-philosophy.svg',
+    imageAlt: 'Illustrated classical columns for Greek philosophical schools',
     keyFigures: [philosophers[0], philosophers[1], philosophers[2]],
     keyEvents: [
       {
@@ -407,8 +407,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Luke 2:1; Galatians 4:4',
     quote: 'When the fullness of time had come, God sent forth his Son, born of woman, born under the law.',
     quoteSource: 'Galatians 4:4',
-    imageUrl: '/images/periods/roman-empire.avif',
-    imageAlt: 'Ancient stone architecture in golden hour',
+    imageUrl: '/images/periods/roman-empire.svg',
+    imageAlt: 'Illustrated Roman arch and imperial roadway motif',
     keyFigures: [],
     keyEvents: [
       {
@@ -449,8 +449,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Matthew, Mark, Luke, John',
     quote: 'I am the way, and the truth, and the life. No one comes to the Father except through me.',
     quoteSource: 'John 14:6',
-    imageUrl: '/images/periods/life-of-christ.jpg',
-    imageAlt: 'Garden of Gethsemane olive trees in morning light',
+    imageUrl: '/images/periods/life-of-christ.svg',
+    imageAlt: 'Illustrated cross and halo for the life and ministry of Christ',
     keyFigures: [biblicalFigures[4]],
     keyEvents: [
       {
@@ -507,8 +507,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Acts - Revelation',
     quote: 'And they devoted themselves to the apostles\' teaching and the fellowship, to the breaking of bread and the prayers.',
     quoteSource: 'Acts 2:42',
-    imageUrl: '/images/periods/early-church.avif',
-    imageAlt: 'Ancient Ephesus library ruins',
+    imageUrl: '/images/periods/early-church.svg',
+    imageAlt: 'Illustrated flame and fish motif for the early church mission',
     keyFigures: [biblicalFigures[5]],
     keyEvents: [
       {
@@ -550,8 +550,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Jude 1:3; 2 Timothy 1:13-14',
     quote: 'You have made us for yourself, O Lord, and our heart is restless until it rests in you.',
     quoteSource: 'Augustine, Confessions',
-    imageUrl: '/images/periods/church-fathers.avif',
-    imageAlt: 'Ancient cathedral interior with warm light',
+    imageUrl: '/images/periods/church-fathers.svg',
+    imageAlt: 'Illustrated codex and quill for writings of the Church Fathers',
     keyFigures: [philosophers[3]],
     keyEvents: [
       {
@@ -583,8 +583,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Daniel 2:44-45; Matthew 16:18',
     quote: 'I believe in one God, the Father Almighty, Maker of heaven and earth, and of all things visible and invisible.',
     quoteSource: 'Nicene Creed',
-    imageUrl: '/images/periods/constantinian-era.avif',
-    imageAlt: 'Hagia Sophia dome in soft light',
+    imageUrl: '/images/periods/constantinian-era.svg',
+    imageAlt: 'Illustrated Chi-Rho monogram for the Constantinian era',
     keyFigures: [],
     keyEvents: [
       {
@@ -623,8 +623,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Psalm 78:4-7; 2 Timothy 2:2',
     quote: 'Faith and reason are like two wings on which the human spirit rises to the contemplation of truth.',
     quoteSource: 'John Paul II, Fides et Ratio',
-    imageUrl: '/images/periods/middle-ages.jpg',
-    imageAlt: 'Gothic cathedral at twilight',
+    imageUrl: '/images/periods/middle-ages.svg',
+    imageAlt: 'Illustrated cathedral spires for medieval Christendom',
     keyFigures: [philosophers[4]],
     keyEvents: [
       {
@@ -670,8 +670,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Romans 1:16-17; Galatians 3; Ephesians 2:8-9',
     quote: 'The just shall live by faith.',
     quoteSource: 'Romans 1:17',
-    imageUrl: '/images/periods/reformation.jpg',
-    imageAlt: 'Historic church in soft autumn light',
+    imageUrl: '/images/periods/reformation.svg',
+    imageAlt: 'Illustrated hammer and document for the Protestant Reformation',
     keyFigures: [philosophers[5]],
     keyEvents: [
       {
@@ -710,8 +710,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Genesis 1:27; Acts 17:26-27; Romans 13:1-4',
     quote: 'We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights.',
     quoteSource: 'Declaration of Independence',
-    imageUrl: '/images/periods/american-founding.jpg',
-    imageAlt: 'Independence Hall in morning light',
+    imageUrl: '/images/periods/american-founding.svg',
+    imageAlt: 'Illustrated liberty bell and stars for the American Founding',
     keyFigures: [],
     keyEvents: [
       {
@@ -751,8 +751,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Psalm 2; Matthew 24:6-7; Revelation 6:3-4',
     quote: 'Greater love has no one than this, that someone lay down his life for his friends.',
     quoteSource: 'John 15:13',
-    imageUrl: '/images/periods/world-wars.avif',
-    imageAlt: 'Memorial cross in peaceful countryside',
+    imageUrl: '/images/periods/world-wars.svg',
+    imageAlt: 'Illustrated memorial cross and poppy for the World Wars',
     keyFigures: [],
     keyEvents: [
       {
@@ -790,8 +790,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Isaiah 61:1; Galatians 5:1; 1 Peter 2:16',
     quote: 'Mr. Gorbachev, tear down this wall!',
     quoteSource: 'Ronald Reagan, 1987',
-    imageUrl: '/images/periods/cold-war.avif',
-    imageAlt: 'Brandenburg Gate at peaceful dusk',
+    imageUrl: '/images/periods/cold-war.svg',
+    imageAlt: 'Illustrated cracked wall motif for Cold War division',
     keyFigures: [],
     keyEvents: [
       {
@@ -829,8 +829,8 @@ export const historicalPeriods: HistoricalPeriod[] = [
     scripturalContext: 'Matthew 24:42-44; 2 Timothy 3:1-5; Revelation 22:20-21',
     quote: 'He who testifies to these things says, "Surely I am coming soon." Amen. Come, Lord Jesus!',
     quoteSource: 'Revelation 22:20',
-    imageUrl: '/images/periods/modern-era.avif',
-    imageAlt: 'Hopeful sunrise over calm waters',
+    imageUrl: '/images/periods/modern-era.svg',
+    imageAlt: 'Illustrated connected globe for the modern global age',
     keyFigures: [],
     keyEvents: [
       {

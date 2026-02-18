@@ -1,0 +1,26 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600' role='img' aria-label='Creation'>
+  <defs>
+    <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#0f1f2f'/>
+      <stop offset='58%' stop-color='#2a4b66'/>
+      <stop offset='100%' stop-color='#9ac7ff'/>
+    </linearGradient>
+    <radialGradient id='glow' cx='50%' cy='44%' r='58%'>
+      <stop offset='0%' stop-color='rgba(255,255,255,0.22)'/>
+      <stop offset='100%' stop-color='rgba(255,255,255,0)'/>
+    </radialGradient>
+  </defs>
+  <rect width='1200' height='600' fill='url(#g)'/>
+  <rect width='1200' height='600' fill='url(#glow)'/>
+  <circle cx='180' cy='110' r='180' fill='rgba(255,255,255,0.06)'/>
+  <circle cx='1010' cy='520' r='210' fill='rgba(0,0,0,0.09)'/>
+  <g>
+<circle cx='600' cy='285' r='145' fill='none' stroke='rgba(255,255,255,0.45)' stroke-width='2'/>
+<circle cx='600' cy='285' r='92' fill='none' stroke='rgba(255,255,255,0.25)' stroke-width='2'/>
+<circle cx='600' cy='285' r='25' fill='rgba(255,255,255,0.6)'/>
+<path d='M470 420 Q600 340 730 420' stroke='rgba(255,255,255,0.42)' stroke-width='10' fill='none' stroke-linecap='round'/>
+        </g>
+  <rect x='38' y='38' width='1124' height='524' rx='30' fill='none' stroke='rgba(255,255,255,0.17)' stroke-width='2'/>
+  <text x='86' y='92' font-family='Georgia, serif' font-size='46' fill='rgba(255,255,255,0.88)' font-weight='700'>Creation</text>
+  <text x='86' y='132' font-family='Georgia, serif' font-size='24' fill='rgba(255,255,255,0.75)'>God spoke and the world began.</text>
+</svg>

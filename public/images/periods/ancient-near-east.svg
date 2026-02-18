@@ -1,0 +1,26 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600' viewBox='0 0 1200 600' role='img' aria-label='Ancient Near East'>
+  <defs>
+    <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+      <stop offset='0%' stop-color='#2b1f17'/>
+      <stop offset='58%' stop-color='#6b4b2f'/>
+      <stop offset='100%' stop-color='#d6b178'/>
+    </linearGradient>
+    <radialGradient id='glow' cx='50%' cy='44%' r='58%'>
+      <stop offset='0%' stop-color='rgba(255,255,255,0.22)'/>
+      <stop offset='100%' stop-color='rgba(255,255,255,0)'/>
+    </radialGradient>
+  </defs>
+  <rect width='1200' height='600' fill='url(#g)'/>
+  <rect width='1200' height='600' fill='url(#glow)'/>
+  <circle cx='180' cy='110' r='180' fill='rgba(255,255,255,0.06)'/>
+  <circle cx='1010' cy='520' r='210' fill='rgba(0,0,0,0.09)'/>
+  <g>
+<rect x='450' y='380' width='300' height='45' fill='rgba(255,255,255,0.38)'/>
+<rect x='490' y='335' width='220' height='45' fill='rgba(255,255,255,0.48)'/>
+<rect x='530' y='290' width='140' height='45' fill='rgba(255,255,255,0.58)'/>
+<rect x='565' y='245' width='70' height='45' fill='rgba(255,255,255,0.68)'/>
+        </g>
+  <rect x='38' y='38' width='1124' height='524' rx='30' fill='none' stroke='rgba(255,255,255,0.17)' stroke-width='2'/>
+  <text x='86' y='92' font-family='Georgia, serif' font-size='46' fill='rgba(255,255,255,0.88)' font-weight='700'>Ancient Near East</text>
+  <text x='86' y='132' font-family='Georgia, serif' font-size='24' fill='rgba(255,255,255,0.75)'>Cities, law, and the cradle of civilization.</text>
+</svg>
