@@ -344,8 +344,8 @@ export default function App() {
                     History of the World
                   </h2>
                   <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed mt-6 text-base sm:text-[1.08rem]">
-                    Explore the storyline of Scripture, civilizations, church history, and national legacy in one unified learning atlas.
-                    Every era is curated for deep understanding rather than shallow browsing.
+                    Explore Scripture, civilizations, church history, and national legacy in one source-linked learning atlas.
+                    Each era includes direct references so you can verify claims instead of just scrolling summaries.
                   </p>
                   <div className="mt-8 flex items-center justify-center">
                     <div className="relative pl-5 max-w-2xl text-left">

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { motion, useScroll, useTransform, type Variants } from 'motion/react';
 import type { HistoricalPeriod } from '@/types/history';
 import { Badge } from '@/components/ui/badge';
@@ -48,6 +48,30 @@ function resolveAssetUrl(url?: string): string | undefined {
   return url;
 }
 
+const sourceTypeLabel: Record<HistoricalPeriod['sources'][number]['type'], string> = {
+  bible: 'Scripture',
+  archaeological: 'History',
+  grokipedia: 'Grokipedia',
+};
+
+function sourceHostname(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+
+function formatSourceCitation(title: string, url: string, accessDate: Date): string {
+  const accessDateLabel = accessDate.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
+  return `${title}. Retrieved ${accessDateLabel}, from ${url}`;
+}
+
 export function PeriodDetail({
   period,
   onBack,
@@ -59,12 +83,24 @@ export function PeriodDetail({
   learningPrompt,
 }: PeriodDetailProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [copiedSourceUrl, setCopiedSourceUrl] = useState<string | null>(null);
+  const citationAccessDate = useMemo(() => new Date(), []);
   const imageSrc = resolveAssetUrl(period.imageUrl);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start'],
   });
   const imageY = useTransform(scrollYProgress, [0, 0.5], [0, 30]);
+
+  async function handleCopyCitation(citation: string, sourceUrl: string): Promise<void> {
+    try {
+      await navigator.clipboard.writeText(citation);
+      setCopiedSourceUrl(sourceUrl);
+      window.setTimeout(() => setCopiedSourceUrl((current) => (current === sourceUrl ? null : current)), 1800);
+    } catch {
+      setCopiedSourceUrl(null);
+    }
+  }
 
   return (
     <motion.div
@@ -275,22 +311,54 @@ export function PeriodDetail({
         <Card className="border-border/30">
           <CardHeader>
             <CardTitle className="text-lg font-medium">Sources</CardTitle>
+            <CardDescription className="text-sm">
+              Direct links with copy-ready citation text for faster study notes.
+            </CardDescription>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2.5">
-              {period.sources.map((source) => (
-                <li key={source.url}>
-                  <a
-                    href={source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2.5 text-sm text-primary hover:underline"
-                  >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    {source.title}
-                  </a>
-                </li>
-              ))}
+            <ul className="space-y-3">
+              {period.sources.map((source) => {
+                const citation = formatSourceCitation(source.title, source.url, citationAccessDate);
+                const host = sourceHostname(source.url);
+                const isCopied = copiedSourceUrl === source.url;
+
+                return (
+                  <li key={source.url} className="rounded-xl border border-border/30 p-3 sm:p-4">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <Badge variant="outline" className="text-xs border-border/40">
+                        {sourceTypeLabel[source.type]}
+                      </Badge>
+                      <Badge variant="secondary" className="text-xs">
+                        {host}
+                      </Badge>
+                    </div>
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 inline-flex items-center gap-2 text-sm text-primary hover:underline"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      {source.title}
+                    </a>
+                    <p className="mt-2 text-xs text-muted-foreground break-all">
+                      {citation}
+                    </p>
+                    <div className="mt-3">
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="outline"
+                        onClick={() => {
+                          void handleCopyCitation(citation, source.url);
+                        }}
+                      >
+                        {isCopied ? 'Citation copied' : 'Copy citation'}
+                      </Button>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </CardContent>
         </Card>

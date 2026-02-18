@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: "Crimson Pro", Georgia, serif;
-  --font-serif: "Crimson Pro", Georgia, serif;
+  --font-sans: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --font-serif: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
 }
 
 @font-face {
@@ -196,9 +196,10 @@ html {
 .scripture-label {
   font-size: 0.6875rem;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   color: rgba(143, 170, 143, 0.6);
   font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .drop-cap {
@@ -213,7 +214,8 @@ html {
 
 .caption {
   font-size: 0.6875rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   font-weight: 500;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }

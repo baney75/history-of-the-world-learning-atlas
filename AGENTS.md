@@ -98,6 +98,20 @@
 - Current state: none found in this repository.
 - If these files are added later, treat them as additional repo-level constraints.
 
+## Skill Routing for This Repo
+- Source ingestion and markdown lifecycle: `source-markdown-lifecycle`
+  - Capture web/docs to markdown, then choose keep vs delete after synthesis.
+- Writing quality and anti-slop editing: `anti-slop`
+  - Use `references/style-guides.md` (includes *The Elements of Style*) for polish.
+- Grokipedia workflow (API-down resilient): `grokipedia-research`
+  - Prefer site search + snapshot/capture workflow instead of legacy API assumptions.
+- Academic truth-seeking workflow: `academic-truth-research`
+  - Apply CRAAP/SIFT, evidence hierarchy, contradiction checks, and proper citation.
+- Current events workflow: `unbiased-news-research`
+  - Use RSS + cross-source verification and image relevance checks.
+- Historical image sourcing: `web-image-curator`
+  - Use topic-specific, non-generic visuals with provenance.
+
 ## Memory and Update System (Project-Scoped)
 - Memory directory (absolute path): `/Users/baney/Documents/Software/History of the World/agentmem`
 - Memory index (absolute path): `/Users/baney/Documents/Software/History of the World/agentmem/memory.md`
