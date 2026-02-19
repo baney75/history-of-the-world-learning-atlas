@@ -1,4 +1,4 @@
-# AGENTS.md - History of the World
+# AGENTS.md - History of the Western World
 
 ## Scope
 - This file applies to the repository rooted at `/Users/baney/Documents/Software/History of the World`.
@@ -23,6 +23,19 @@
 - Read `package.json`, `eslint.config.js`, `tsconfig.app.json`, and files you will modify.
 - Prefer smallest safe edit; do not refactor unrelated code.
 - Preserve existing theology/content voice unless explicitly asked to rewrite it.
+
+## Truth-Seeking Policy
+**"Fiat justitia, ruat caelum" — Let justice be done, though the heavens fall.**
+— Attributed to Lucius Calpurnius Piso Caesoninus (Roman consul, c. 100-43 BCE)
+
+This is a truth-seeking educational resource. When verifiable truth conflicts with comfort:
+1. **State the truth plainly** with evidence from primary sources.
+2. **Acknowledge complexity** where evidence is mixed or incomplete.
+3. **Cite rebuttals** when strong counterarguments exist with evidence.
+4. **Default to conservative positions** when both sides have strong evidence.
+5. **Never suppress truth** to avoid offense or maintain comfort.
+
+All historical claims must be supported by primary sources (Scripture, archives, official documents, reputable academic sources). No Wikipedia. Grokipedia may be used for discovery only, then replaced with primary sources before citing.
 
 ## Build, Lint, and Test Commands
 - Install deps: `bun install`
@@ -83,12 +96,24 @@
   - at least one direct source URL (prefer two)
 - Prefer primary/direct references (Scripture passages, archives, reputable encyclopedic sources).
 - Keep source titles human-readable; keep URLs stable and publicly accessible.
+- Do not use Wikipedia for discovery or citation.
+- Grokipedia is allowed for discovery only; replace with primary/official/publicly accessible sources before citing.
+- For new/changed source sets, capture source pages to Markdown under `agentmem/sources/` for durable review context.
 
 ## Image Rules
 - Store timeline images locally in `public/images/periods/`.
 - Prefer real historical imagery over generic illustrations.
 - Use compressed assets (web-friendly size) to protect performance.
 - Ensure each image matches its period and can still read clearly at card size.
+
+## UI Verification Gate (Mobile-First Required)
+- For any UI/layout/style change, verify in this viewport order: `390x844` -> `360x800` -> `1280x720`.
+- Capture and review evidence for each critical screen:
+  - screenshot,
+  - accessibility snapshot,
+  - console errors.
+- Use `vision-agent` for screenshot interpretation when overlap, clipping, contrast, hierarchy, or readability concerns are possible.
+- Do not mark UI work complete without both mobile and desktop screenshot evidence.
 
 ## Cursor/Copilot Rules Compatibility
 - Checked paths:
@@ -163,5 +188,6 @@
 - Lint/build pass (and tests if configured).
 - New/changed sources are valid and directly relevant.
 - New/changed images render and are period-accurate.
+- UI changes include mobile + desktop screenshot evidence and accessibility/console checks.
 - `agentmem` files updated with decisions + current state.
 - Final report includes what changed, verification run, and any remaining risk.

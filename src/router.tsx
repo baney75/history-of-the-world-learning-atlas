@@ -1,7 +1,9 @@
-import { createRootRoute, createRoute, createRouter } from '@tanstack/react-router';
+import { createRootRoute, createRoute, createRouter, Outlet } from '@tanstack/react-router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import App from '@/App';
+import FiguresPage from '@/pages/FiguresPage';
+import DefinitionsPage from '@/pages/DefinitionsPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -15,7 +17,7 @@ const queryClient = new QueryClient({
 function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
-      <App />
+      <Outlet />
       <ReactQueryDevtools />
     </QueryClientProvider>
   );
@@ -28,6 +30,7 @@ const rootRoute = createRootRoute({
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
+  component: App,
 });
 
 const periodRoute = createRoute({
@@ -40,7 +43,31 @@ const figureRoute = createRoute({
   path: '/figure/$figureId',
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, periodRoute, figureRoute]);
+const figuresRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/figures',
+  component: FiguresPage,
+});
+
+const definitionsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/definitions',
+  component: DefinitionsPage,
+});
+
+const definitionDetailRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/definitions/$termId',
+});
+
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+  periodRoute,
+  figureRoute,
+  figuresRoute,
+  definitionsRoute,
+  definitionDetailRoute,
+]);
 
 export const router = createRouter({ routeTree });
 

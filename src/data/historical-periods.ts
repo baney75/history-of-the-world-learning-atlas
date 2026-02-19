@@ -6,54 +6,171 @@ export const biblicalFigures: HistoricalFigure[] = [
     name: 'Abraham',
     title: 'Father of the Faithful',
     lifespan: 'c. early 2nd millennium BCE',
-    description: 'Abraham is the patriarch of the covenant, called by God from Ur of the Chaldeans to become the father of many nations. Through his faith and obedience, God established an everlasting covenant promising descendants as numerous as the stars and the land of Canaan as an eternal inheritance.',
-    significance: 'Father of Isaac and Ishmael; received the Abrahamic Covenant; exemplar of justifying faith for all believers.',
-    scripturalReference: 'Genesis 12-25; Romans 4; Galatians 3; Hebrews 11'
+    description: 'Abraham is the patriarch of the covenant, called by God from Ur of the Chaldeans to become the father of many nations. Through his faith and obedience, God established an everlasting covenant promising descendants as numerous as the stars and the land of Canaan as an eternal inheritance. His journey from Ur to Canaan, his willingness to sacrifice Isaac, and his intercession for Sodom demonstrate a faith that trusted God completely.',
+    significance: 'Father of Isaac and Ishmael; received the Abrahamic Covenant; exemplar of justifying faith for all believers; ancestor of the Messiah.',
+    scripturalReference: 'Genesis 12-25; Romans 4; Galatians 3; Hebrews 11:8-19'
   },
   {
     id: 'moses',
     name: 'Moses',
     title: 'Prophet of God and Lawgiver',
     lifespan: 'c. 13th century BCE',
-    description: 'Moses was chosen by God to deliver the Israelites from bondage in Egypt. Through mighty signs and wonders, God demonstrated His power over the false gods of Egypt. At Mount Sinai, Moses received the Ten Commandments and the Law that would govern God\'s chosen people.',
-    significance: 'Mediator of the Mosaic Covenant; delivered Israel from Egypt; received the Law; authored the Pentateuch.',
-    scripturalReference: 'Exodus, Leviticus, Numbers, Deuteronomy'
+    description: 'Moses was chosen by God to deliver the Israelites from bondage in Egypt. Through mighty signs and wonders, God demonstrated His power over the false gods of Egypt. At Mount Sinai, Moses received the Ten Commandments and the Law that would govern God\'s chosen people. He led Israel through the wilderness for forty years, interceded for the people when they sinned, and glimpsed the Promised Land before his death.',
+    significance: 'Mediator of the Mosaic Covenant; delivered Israel from Egypt; received the Law; authored the Pentateuch; greatest prophet of the Old Testament.',
+    scripturalReference: 'Exodus, Leviticus, Numbers, Deuteronomy; Acts 7:20-44; Hebrews 3:1-6'
   },
   {
     id: 'david',
     name: 'David',
     title: 'King of Israel, Man After God\'s Heart',
-    lifespan: 'c. 1000 BCE',
-    description: 'David, the shepherd boy anointed by Samuel, defeated Goliath and rose to become Israel\'s greatest king. He conquered Jerusalem and established it as the eternal capital of God\'s people. God made an everlasting covenant with David, promising that the Messiah would come from his lineage.',
-    significance: 'Established Jerusalem as capital; received the Davidic Covenant; composed the Psalms; ancestor of Jesus Christ.',
-    scripturalReference: '1 Samuel 16 - 1 Kings 2; Psalms; Matthew 1:1'
+    lifespan: 'c. 1040-970 BCE',
+    description: 'David, the shepherd boy anointed by Samuel, defeated Goliath and rose to become Israel\'s greatest king. He conquered Jerusalem and established it as the eternal capital of God\'s people. God made an everlasting covenant with David, promising that the Messiah would come from his lineage. Though he fell into sin with Bathsheba, his repentance produced the Psalms of contrition that have comforted believers for millennia.',
+    significance: 'Established Jerusalem as capital; received the Davidic Covenant; composed the Psalms; ancestor of Jesus Christ; model of repentance.',
+    scripturalReference: '1 Samuel 16 - 1 Kings 2; Psalms; Matthew 1:1; Acts 13:22'
   },
   {
     id: 'solomon',
     name: 'Solomon',
     title: 'King of Israel',
     lifespan: 'c. 970-931 BCE',
-    description: 'Solomon, son of David and Bathsheba, was granted wisdom by God surpassing all men. He built the First Temple in Jerusalem, the dwelling place of God\'s presence among His people. His reign marked the zenith of Israel\'s power and prosperity.',
-    significance: 'Built the First Temple; renowned for divine wisdom; authored Proverbs, Ecclesiastes, and Song of Solomon.',
-    scripturalReference: '1 Kings 1-11; Proverbs; Ecclesiastes; Song of Solomon'
+    description: 'Solomon, son of David and Bathsheba, was granted wisdom by God surpassing all men. He built the First Temple in Jerusalem, the dwelling place of God\'s presence among His people. His reign marked the zenith of Israel\'s power and prosperity. Yet his later years were marred by idolatry through foreign wives, demonstrating that wisdom without faithfulness leads to ruin.',
+    significance: 'Built the First Temple; renowned for divine wisdom; authored Proverbs, Ecclesiastes, and Song of Solomon; exemplifies both wisdom and warning.',
+    scripturalReference: '1 Kings 1-11; Proverbs; Ecclesiastes; Song of Solomon; Matthew 12:42'
+  },
+  {
+    id: 'elijah',
+    name: 'Elijah',
+    title: 'Prophet of Fire',
+    lifespan: 'c. 9th century BCE',
+    description: 'Elijah the Tishbite was a prophet of unparalleled boldness who confronted King Ahab and the prophets of Baal on Mount Carmel. God answered his prayer with fire from heaven, demonstrating that the Lord alone is God. His flight to Horeb, where God spoke in a still small voice, reveals that divine power often works through quiet persistence rather than spectacular signs.',
+    significance: 'Confronted Baal worship; demonstrated God\'s power over false gods; forerunner of John the Baptist; taken to heaven in a chariot of fire.',
+    scripturalReference: '1 Kings 17-19; 2 Kings 2; Matthew 17:1-13; James 5:17-18'
+  },
+  {
+    id: 'isaiah',
+    name: 'Isaiah',
+    title: 'Prophet of the Messiah',
+    lifespan: 'c. 8th century BCE',
+    description: 'Isaiah, the prince of prophets, ministered in Jerusalem during the reigns of Uzziah, Jotham, Ahaz, and Hezekiah. His prophecy contains more explicit predictions of Christ than any other Old Testament book, including the virgin birth, the Suffering Servant, and the Messianic kingdom. His vision of God\'s holiness in the temple transformed his life and ministry.',
+    significance: 'Foretold the virgin birth and Suffering Servant; saw the Lord high and lifted up; prophesied the Messiah\'s birth, death, and kingdom.',
+    scripturalReference: 'Isaiah; Matthew 1:22-23; Acts 8:30-35; Romans 10:16-21'
+  },
+  {
+    id: 'jeremiah',
+    name: 'Jeremiah',
+    title: 'Weeping Prophet',
+    lifespan: 'c. 650-570 BCE',
+    description: 'Jeremiah prophesied judgment to Judah for forty years, weeping over Jerusalem\'s coming destruction. Despite persecution, imprisonment, and rejection, he faithfully proclaimed God\'s word. His prophecy of the New Covenant anticipated the coming of Christ and the writing of God\'s law on human hearts.',
+    significance: 'Prophesied the New Covenant; wept over Jerusalem; ministered through persecution; witnessed the fall of Jerusalem.',
+    scripturalReference: 'Jeremiah; Lamentations; Matthew 2:17-18; Hebrews 8:7-13'
+  },
+  {
+    id: 'daniel',
+    name: 'Daniel',
+    title: 'Prophet of the Kingdoms',
+    lifespan: 'c. 620-530 BCE',
+    description: 'Daniel was taken to Babylon as a young man and rose to prominence in the courts of Nebuchadnezzar, Belshazzar, and Darius. His interpretation of dreams, deliverance from the lions\' den, and visions of the four kingdoms demonstrate God\'s sovereignty over all nations. His prophecy of the seventy weeks provides the timeline for the coming of the Messiah.',
+    significance: 'Interpreted dreams; delivered from lions; prophesied the seventy weeks; revealed the succession of world kingdoms.',
+    scripturalReference: 'Daniel; Matthew 24:15; Mark 13:14'
   },
   {
     id: 'jesus',
     name: 'Jesus Christ',
     title: 'Lord and Savior, Son of God',
     lifespan: 'c. 6-4 BC - c. AD 30-33',
-    description: 'Jesus Christ is the eternal Son of God, the Word made flesh, who dwelt among us. He is the fulfillment of all Old Testament prophecy, the promised Messiah who came to save His people from their sins. Through His death on the cross and resurrection on the third day, He accomplished the redemption of all who believe.',
-    significance: 'The only begotten Son of God; Savior of the world; fulfilled all Scripture; conquered death and sin.',
-    scripturalReference: 'Matthew, Mark, Luke, John; Colossians 1:15-20; Philippians 2:5-11'
+    description: 'Jesus Christ is the eternal Son of God, the Word made flesh, who dwelt among us. He is the fulfillment of all Old Testament prophecy, the promised Messiah who came to save His people from their sins. Through His death on the cross and resurrection on the third day, He accomplished the redemption of all who believe. He is the only way to the Father, the only name under heaven by which we must be saved.',
+    significance: 'The only begotten Son of God; Savior of the world; fulfilled all Scripture; conquered death and sin; will return to judge the living and the dead.',
+    scripturalReference: 'Matthew, Mark, Luke, John; Colossians 1:15-20; Philippians 2:5-11; Hebrews 1:1-4'
+  },
+  {
+    id: 'peter',
+    name: 'Peter',
+    title: 'Apostle to the Jews',
+    lifespan: 'c. 1 BC - c. AD 64-68',
+    description: 'Simon Peter was a fisherman called by Jesus to become a fisher of men. He confessed Jesus as the Christ, denied Him three times, and was restored by the risen Lord. On Pentecost, he preached the first gospel sermon, and three thousand souls were saved. He became the leading apostle to the Jews and authored two epistles before his martyrdom in Rome.',
+    significance: 'Leading apostle; preached at Pentecost; apostle to the Jews; authored 1 and 2 Peter; martyred for Christ.',
+    scripturalReference: 'Matthew 4:18-20; Matthew 16:13-20; Acts 2; 1 Peter; 2 Peter'
+  },
+  {
+    id: 'john',
+    name: 'John',
+    title: 'Apostle of Love',
+    lifespan: 'c. AD 6-100',
+    description: 'John, the beloved disciple, was a fisherman called by Jesus along with his brother James. He leaned on Jesus\' breast at the Last Supper, stood at the cross with Mary, and received the vision of the Apocalypse. His Gospel and epistles emphasize love, light, and life in Christ. He was the only apostle to die a natural death.',
+    significance: 'Authored the Gospel of John, 1-3 John, and Revelation; emphasized love and truth; received the apocalyptic vision.',
+    scripturalReference: 'John 13:23-25; John 19:26-27; John 21:20-24; Revelation 1:1-3'
   },
   {
     id: 'paul',
     name: 'Paul the Apostle',
     title: 'Apostle to the Gentiles',
     lifespan: 'c. 5 AD - c. 67 AD',
-    description: 'Paul, formerly Saul of Tarsus, was a Pharisee who persecuted the church until the risen Christ appeared to him on the Damascus road. Transformed by God\'s grace, he became the foremost apostle to the Gentiles, establishing churches throughout the Roman world and penning thirteen epistles of the New Testament.',
-    significance: 'Authored 13 New Testament epistles; established churches across Asia Minor and Greece; articulated justification by faith alone.',
-    scripturalReference: 'Acts 9-28; Romans through Philemon'
+    description: 'Paul, formerly Saul of Tarsus, was a Pharisee who persecuted the church until the risen Christ appeared to him on the Damascus road. Transformed by God\'s grace, he became the foremost apostle to the Gentiles, establishing churches throughout the Roman world and penning thirteen epistles of the New Testament. His letters systematically articulate justification by faith alone, the unity of Jew and Gentile in Christ, and the practical implications of the gospel.',
+    significance: 'Authored 13 New Testament epistles; established churches across Asia Minor and Greece; articulated justification by faith alone; missionary par excellence.',
+    scripturalReference: 'Acts 9-28; Romans through Philemon; 2 Peter 3:15-16'
+  },
+  {
+    id: 'joseph',
+    name: 'Joseph',
+    title: 'Patriarch and Vizier of Egypt',
+    lifespan: 'c. 19th century BCE',
+    description: 'Joseph, the beloved son of Jacob, was sold into slavery by his jealous brothers. Through God\'s providence, he rose from prisoner to vizier of Egypt, second only to Pharaoh. His interpretation of dreams saved Egypt and surrounding nations from famine. Joseph\'s forgiveness of his brothers demonstrates God\'s sovereignty: "You meant evil against me, but God meant it for good" (Genesis 50:20).',
+    significance: 'Preserved the family of Jacob; exemplified forgiveness and providence; foreshadowed Christ\'s rejection and exaltation.',
+    scripturalReference: 'Genesis 37-50; Psalm 105:16-22; Acts 7:9-16'
+  },
+  {
+    id: 'joshua',
+    name: 'Joshua',
+    title: 'Conqueror of Canaan',
+    lifespan: 'c. 14th-13th century BCE',
+    description: 'Joshua, son of Nun, was Moses\' successor who led Israel into the Promised Land. He served as Moses\' assistant for forty years, spied out the land with Caleb, and was commissioned by God to conquer Canaan. His famous declaration, "As for me and my house, we will serve the Lord" (Joshua 24:15), expresses covenant faithfulness. Under his leadership, Israel possessed the land God promised to Abraham.',
+    significance: 'Led the conquest of Canaan; divided the land among the tribes; called Israel to covenant faithfulness; military leader and faithful servant.',
+    scripturalReference: 'Joshua; Exodus 17:8-16; Numbers 13-14; Hebrews 4:8'
+  },
+  {
+    id: 'samuel',
+    name: 'Samuel',
+    title: 'Prophet, Priest, and Judge',
+    lifespan: 'c. 11th century BCE',
+    description: 'Samuel was the last judge and first prophet of the monarchy period. Born to Hannah in answer to prayer, he was dedicated to the Lord\'s service from childhood. He anointed both Saul and David as kings, establishing the monarchy in Israel. His ministry marked the transition from the period of judges to the united kingdom.',
+    significance: 'Last judge of Israel; anointed the first two kings; established schools of prophets; faithful intercessor for the nation.',
+    scripturalReference: '1 Samuel 1-25; Psalm 99:6; Jeremiah 15:1; Acts 3:24; Acts 13:20'
+  },
+  {
+    id: 'ruth',
+    name: 'Ruth',
+    title: 'Moabitess and Ancestor of David',
+    lifespan: 'c. 11th century BCE',
+    description: 'Ruth, a Moabite woman, demonstrated extraordinary loyalty to her Israelite mother-in-law Naomi: "Your people shall be my people, and your God my God" (Ruth 1:16). Her faith in the God of Israel led her to Bethlehem, where she married Boaz and became the great-grandmother of King David. She is one of four women named in Matthew\'s genealogy of Christ.',
+    significance: 'Great-grandmother of David; exemplified loyalty and faith; included in the Messianic lineage; convert to the true God.',
+    scripturalReference: 'Ruth; Matthew 1:5'
+  },
+  {
+    id: 'esther',
+    name: 'Esther',
+    title: 'Queen of Persia and Deliverer',
+    lifespan: 'c. 5th century BCE',
+    description: 'Esther, a Jewish orphan raised by her cousin Mordecai, became queen of Persia during the exile. When Haman plotted to destroy the Jews, Esther risked her life to intercede for her people: "If I perish, I perish" (Esther 4:16). God used her courage to save the Jewish people from genocide. The feast of Purim commemorates this deliverance.',
+    significance: 'Saved the Jewish people from genocide; exemplified courage and providence; queen of the Persian Empire; heroine of Purim.',
+    scripturalReference: 'Esther'
+  },
+  {
+    id: 'ezra',
+    name: 'Ezra',
+    title: 'Scribe and Reformer',
+    lifespan: 'c. 5th-4th century BCE',
+    description: 'Ezra was a scribe skilled in the Law of Moses who led a group of exiles from Babylon to Jerusalem. He read the Law to the assembled people, leading to national repentance and covenant renewal. His reforms purified the community from pagan influences. Ezra\'s ministry, alongside Nehemiah, restored proper worship after the exile.',
+    significance: 'Restored the Law\'s authority; led spiritual renewal; reformed the community; compiled and preserved Scripture.',
+    scripturalReference: 'Ezra; Nehemiah 8-10'
+  },
+  {
+    id: 'nehemiah',
+    name: 'Nehemiah',
+    title: 'Governor and Builder',
+    lifespan: 'c. 5th century BCE',
+    description: 'Nehemiah, cupbearer to King Artaxerxes, led the effort to rebuild Jerusalem\'s walls despite fierce opposition. His leadership combined prayer, planning, and perseverance. In fifty-two days, the walls were completed, demonstrating that "the people had a mind to work" (Nehemiah 4:6). He also partnered with Ezra in spiritual renewal.',
+    significance: 'Rebuilt Jerusalem\'s walls; governed Judah; partnered with Ezra in reform; exemplified prayerful leadership.',
+    scripturalReference: 'Nehemiah'
   }
 ];
 
@@ -84,6 +201,36 @@ export const philosophers: HistoricalFigure[] = [
     description: 'Aristotle, student of Plato, developed systematic logic and empirical investigation. His categories and metaphysical framework, though not divinely revealed, provided tools that Christian thinkers like Thomas Aquinas would later employ to articulate and defend the faith.',
     significance: 'Father of logic and biology; developed systematic metaphysics; influenced medieval scholasticism.',
     scripturalReference: 'Romans 1:19-20 (God\'s invisible attributes perceived in creation)'
+  }
+];
+
+export const churchFathers: HistoricalFigure[] = [
+  {
+    id: 'athanasius',
+    name: 'Athanasius',
+    title: 'Church Father and Defender of Orthodoxy',
+    lifespan: 'c. 296-373 AD',
+    description: 'Athanasius, Bishop of Alexandria, was the foremost defender of the deity of Christ against Arian heresy. At the Council of Nicaea in 325, he championed the biblical truth that the Son is homoousios—of the same essence—as the Father. His tireless defense of Trinitarian orthodoxy, despite five exiles, earned him the title "Athanasius Contra Mundum"—Athanasius Against the World.',
+    significance: 'Defended Christ\'s deity at Nicaea; authored On the Incarnation; champion of Trinitarian orthodoxy.',
+    scripturalReference: 'John 1:1-14; Colossians 1:15-20'
+  },
+  {
+    id: 'john-chrysostom',
+    name: 'John Chrysostom',
+    title: 'Church Father and Preacher',
+    lifespan: 'c. 347-407 AD',
+    description: 'John Chrysostom, Archbishop of Constantinople, was renowned as the greatest preacher of the early church—his name means "Golden Mouth." His homilies on Scripture, especially Matthew and Romans, remain treasures of biblical exposition. He fearlessly condemned sin in high places, which led to his exile and death, yet his preaching continues to instruct the church.',
+    significance: 'Greatest preacher of the early church; authored influential homilies; martyred for prophetic witness.',
+    scripturalReference: '2 Timothy 4:2; James 3:1-12'
+  },
+  {
+    id: 'jerome',
+    name: 'Jerome',
+    title: 'Church Father and Translator',
+    lifespan: 'c. 342-420 AD',
+    description: 'Jerome, scholar and ascetic, translated the Bible into Latin—the Vulgate—which served as the standard Bible of Western Christianity for over a thousand years. His mastery of Hebrew, rare among Latin fathers, enabled him to translate the Old Testament directly from the original. His scholarship preserved Scripture for generations of believers.',
+    significance: 'Translated the Latin Vulgate; mastered Hebrew and Greek; preserved Scripture for the Western church.',
+    scripturalReference: 'Psalm 119:105; 2 Timothy 3:16-17'
   },
   {
     id: 'augustine',
@@ -95,6 +242,36 @@ export const philosophers: HistoricalFigure[] = [
     scripturalReference: 'Romans 5:12-21; Ephesians 2:8-9'
   },
   {
+    id: 'irenaeus',
+    name: 'Irenaeus of Lyons',
+    title: 'Church Father and Apologist',
+    lifespan: 'c. 130-202 AD',
+    description: 'Irenaeus, Bishop of Lyons, wrote Against Heresies to combat Gnosticism, defending the unity of God, the goodness of creation, and the reality of Christ\'s incarnation. He emphasized the rule of faith handed down from the apostles and the importance of apostolic succession. His theology of recapitulation—Christ summing up all things—profoundly shaped Christian thought.',
+    significance: 'Defended orthodoxy against Gnosticism; articulated recapitulation theology; emphasized apostolic tradition.',
+    scripturalReference: 'Ephesians 1:10; Colossians 1:20'
+  },
+  {
+    id: 'tertullian',
+    name: 'Tertullian',
+    title: 'Church Father and Apologist',
+    lifespan: 'c. 155-240 AD',
+    description: 'Tertullian, a lawyer turned Christian apologist, was the first major theologian to write in Latin, coining terms like "Trinity" and "sacrament." His vigorous defense of Christianity against pagan accusations and his treatises on prayer, baptism, and repentance shaped Western theology. Though later influenced by Montanism, his early works remain invaluable.',
+    significance: 'First major Latin theologian; coined "Trinity"; defended Christianity against paganism; shaped Western theological vocabulary.',
+    scripturalReference: 'Matthew 28:19; 2 Corinthians 13:14'
+  },
+  {
+    id: 'origen',
+    name: 'Origen',
+    title: 'Church Father and Scholar',
+    lifespan: 'c. 185-254 AD',
+    description: 'Origen of Alexandria was the greatest biblical scholar of the early church, producing the Hexapla—a six-column comparison of Old Testament texts—and writing extensive commentaries. His method of allegorical interpretation influenced later exegesis. Though some of his speculative teachings were later condemned, his scholarship and devotion to Scripture remain exemplary.',
+    significance: 'Produced the Hexapla; wrote extensive commentaries; developed allegorical interpretation; greatest biblical scholar of antiquity.',
+    scripturalReference: '2 Timothy 2:15; Psalm 119:18'
+  }
+];
+
+export const medievalTheologians: HistoricalFigure[] = [
+  {
     id: 'thomas-aquinas',
     name: 'Thomas Aquinas',
     title: 'Doctor of the Church',
@@ -104,6 +281,27 @@ export const philosophers: HistoricalFigure[] = [
     scripturalReference: 'Psalm 19:1; Romans 1:20'
   },
   {
+    id: 'anselm',
+    name: 'Anselm of Canterbury',
+    title: 'Doctor of the Church',
+    lifespan: 'c. 1033-1109',
+    description: 'Anselm, Archbishop of Canterbury, developed the ontological argument for God\'s existence and the satisfaction theory of atonement. His motto "faith seeking understanding" expressed his conviction that reason serves faith. In Cur Deus Homo (Why God Became Man), he explained why Christ\'s death was necessary for salvation.',
+    significance: 'Developed ontological argument; formulated satisfaction theory of atonement; "faith seeking understanding."',
+    scripturalReference: 'Psalm 14:1; Romans 3:23-26'
+  },
+  {
+    id: 'bernard-clairvaux',
+    name: 'Bernard of Clairvaux',
+    title: 'Abbot and Mystic',
+    lifespan: '1090-1153',
+    description: 'Bernard, Abbot of Clairvaux, was the most influential monk of the twelfth century. His sermons on the Song of Songs explored the soul\'s love for Christ. He preached the Second Crusade and counseled popes and kings. His hymn "Jesus, the Very Thought of Thee" expresses his devotion to Christ.',
+    significance: 'Most influential monk of the 12th century; authored sermons on the Song of Songs; preached the Second Crusade; hymn writer.',
+    scripturalReference: 'Song of Solomon 2:4; Psalm 42:1'
+  }
+];
+
+export const reformers: HistoricalFigure[] = [
+  {
     id: 'martin-luther',
     name: 'Martin Luther',
     title: 'Reformer and Theologian',
@@ -111,6 +309,183 @@ export const philosophers: HistoricalFigure[] = [
     description: 'Martin Luther, German monk and professor, recovered the biblical doctrine of justification by faith alone from the corruption of medieval Catholicism. His posting of the Ninety-Five Theses in 1517 ignited the Protestant Reformation, returning the church to the authority of Scripture alone.',
     significance: 'Initiated the Protestant Reformation; recovered sola fide and sola scriptura; translated Bible into German.',
     scripturalReference: 'Romans 1:17; Galatians 3:11'
+  },
+  {
+    id: 'john-calvin',
+    name: 'John Calvin',
+    title: 'Reformer and Theologian',
+    lifespan: '1509-1564',
+    description: 'John Calvin, French theologian and pastor, systematized Reformed theology in his Institutes of the Christian Religion. His exposition of Scripture, emphasis on God\'s sovereignty, and development of covenant theology shaped Protestant thought for centuries. His ministry in Geneva established a model of church order and discipline.',
+    significance: 'Authored Institutes of the Christian Religion; systematized Reformed theology; established Geneva as Reformation center.',
+    scripturalReference: 'Romans 8:28-30; Ephesians 1:3-14'
+  },
+  {
+    id: 'william-tyndale',
+    name: 'William Tyndale',
+    title: 'Reformer and Translator',
+    lifespan: 'c. 1494-1536',
+    description: 'William Tyndale translated the New Testament into English, defying church authorities who forbade vernacular Scriptures. His translation, remarkably accurate and beautifully written, formed the basis for the King James Version. He was strangled and burned at the stake for his work, praying "Lord, open the King of England\'s eyes."',
+    significance: 'Translated Bible into English; martyr for Scripture access; shaped English language through translation.',
+    scripturalReference: '2 Timothy 3:16-17; Psalm 119:130'
+  },
+  {
+    id: 'john-knox',
+    name: 'John Knox',
+    title: 'Scottish Reformer',
+    lifespan: 'c. 1514-1572',
+    description: 'John Knox led the Scottish Reformation, establishing Presbyterianism as the national church. His fiery preaching and uncompromising stand for Scripture transformed Scotland. He challenged monarchs, endured captivity, and laid the foundation for the Presbyterian tradition that would influence America\'s founding.',
+    significance: 'Led Scottish Reformation; established Presbyterianism; champion of biblical authority over monarchy.',
+    scripturalReference: 'Acts 5:29; Romans 13:1-4'
+  },
+  {
+    id: 'ulrich-zwingli',
+    name: 'Ulrich Zwingli',
+    title: 'Swiss Reformer',
+    lifespan: '1484-1531',
+    description: 'Ulrich Zwingli led the Reformation in Zurich, emphasizing Scripture alone as authority and rejecting traditions not found in the Bible. His approach to the Lord\'s Supper differed from Luther\'s, viewing it as a memorial rather than a sacrament. He died in battle serving as chaplain to Zurich troops, but his reforms shaped Swiss Protestantism.',
+    significance: 'Led Swiss Reformation; emphasized sola scriptura; reformed Zurich; influenced Reformed theology.',
+    scripturalReference: '1 Corinthians 11:23-26; John 6:35-40'
+  },
+  {
+    id: 'jonathan-edwards',
+    name: 'Jonathan Edwards',
+    title: 'Theologian and Revival Preacher',
+    lifespan: '1703-1758',
+    description: 'Jonathan Edwards, pastor and theologian, was the greatest mind America has produced. His sermon "Sinners in the Hands of an Angry God" became the most famous sermon in American history. He articulated the theology of the Great Awakening, defended Reformed orthodoxy, and served as president of Princeton. His works on free will, religious affections, and revival remain influential.',
+    significance: 'Greatest American theologian; preached "Sinners in the Hands of an Angry God"; articulated revival theology; Princeton president.',
+    scripturalReference: 'Deuteronomy 32:35; Romans 9:18-24'
+  },
+  {
+    id: 'john-wesley',
+    name: 'John Wesley',
+    title: 'Founder of Methodism',
+    lifespan: '1703-1791',
+    description: 'John Wesley, Anglican clergyman, founded the Methodist movement after his heart was "strangely warmed" at a meeting on Aldersgate Street. He preached throughout Britain, emphasizing personal conversion, holiness, and the witness of the Spirit. His method of itinerant preaching, small groups, and hymnody transformed English-speaking Christianity.',
+    significance: 'Founded Methodism; preached throughout Britain; emphasized holiness and personal conversion; wrote hymns.',
+    scripturalReference: 'Romans 8:16; 1 Thessalonians 5:23'
+  }
+];
+
+export const americanFounders: HistoricalFigure[] = [
+  {
+    id: 'george-washington',
+    name: 'George Washington',
+    title: 'First President of the United States',
+    lifespan: '1732-1799',
+    description: 'George Washington, commander of the Continental Army and first President of the United States, was indispensable to American independence and the establishment of the republic. His character, self-restraint, and reliance on divine providence set the standard for American leadership. He voluntarily relinquished power, establishing the precedent of peaceful transition.',
+    significance: 'Commander-in-Chief of Continental Army; first President; "Father of his Country"; established precedent of peaceful transition.',
+    scripturalReference: 'Micah 6:8; Romans 13:1-7'
+  },
+  {
+    id: 'thomas-jefferson',
+    name: 'Thomas Jefferson',
+    title: 'Author of the Declaration of Independence',
+    lifespan: '1743-1826',
+    description: 'Thomas Jefferson authored the Declaration of Independence, articulating the self-evident truths that all men are created equal and endowed by their Creator with unalienable rights. As third President, he secured the Louisiana Purchase. Though his theological views were unorthodox, his political philosophy was shaped by biblical concepts of human dignity and liberty.',
+    significance: 'Authored Declaration of Independence; third President; Louisiana Purchase; articulated Creator-endowed rights.',
+    scripturalReference: 'Genesis 1:27; Acts 17:26-27'
+  },
+  {
+    id: 'james-madison',
+    name: 'James Madison',
+    title: 'Father of the Constitution',
+    lifespan: '1751-1836',
+    description: 'James Madison, fourth President of the United States, was the principal architect of the Constitution and the Bill of Rights. His understanding of human nature, informed by biblical realism about sin, led him to design a system of separated powers and checks and balances. He championed religious liberty as an inalienable right.',
+    significance: 'Principal author of Constitution; fourth President; "Father of the Bill of Rights"; champion of religious liberty.',
+    scripturalReference: 'Jeremiah 17:9; Romans 3:23'
+  },
+  {
+    id: 'john-adams',
+    name: 'John Adams',
+    title: 'Second President of the United States',
+    lifespan: '1735-1826',
+    description: 'John Adams, second President of the United States, was a leading advocate for independence and a key diplomat in securing European support. His conviction that only a moral and religious people can sustain a republic shaped his political philosophy. He recognized that the Constitution was made only for a moral and religious people.',
+    significance: 'Second President; leading advocate for independence; negotiated peace with Britain; champion of virtue in public life.',
+    scripturalReference: 'Proverbs 14:34; Psalm 33:12'
+  },
+  {
+    id: 'benjamin-franklin',
+    name: 'Benjamin Franklin',
+    title: 'Founding Father and Inventor',
+    lifespan: '1706-1790',
+    description: 'Benjamin Franklin, though holding unorthodox religious views, recognized the necessity of divine providence in the American cause. At the Constitutional Convention, he called for daily prayer, acknowledging that God governs in the affairs of men. His diplomatic service in France was crucial to American victory.',
+    significance: 'Diplomat to France; delegate to Constitutional Convention; inventor; called for prayer at Convention.',
+    scripturalReference: 'Psalm 127:1; Proverbs 21:1'
+  }
+];
+
+export const modernFigures: HistoricalFigure[] = [
+  {
+    id: 'william-wilberforce',
+    name: 'William Wilberforce',
+    title: 'Abolitionist and Statesman',
+    lifespan: '1759-1833',
+    description: 'William Wilberforce, British parliamentarian and evangelical Christian, led the campaign to abolish the slave trade and slavery itself in the British Empire. His conversion to Christ compelled him to fight for the dignity of every human being created in God\'s image. After decades of struggle, Parliament abolished slavery three days before his death.',
+    significance: 'Led abolition of British slave trade and slavery; evangelical statesman; demonstrated faith in public life.',
+    scripturalReference: 'Genesis 1:27; Galatians 3:28'
+  },
+  {
+    id: 'cs-lewis',
+    name: 'C.S. Lewis',
+    title: 'Christian Apologist and Author',
+    lifespan: '1898-1963',
+    description: 'C.S. Lewis, Oxford don and convert from atheism, became one of the most influential Christian apologists of the twentieth century. His books Mere Christianity, The Screwtape Letters, and the Chronicles of Narnia have led millions to consider the claims of Christ. He articulated the faith with clarity, imagination, and intellectual rigor.',
+    significance: 'Authored Mere Christianity and Chronicles of Narnia; Oxford scholar; influential apologist for Christianity.',
+    scripturalReference: '1 Peter 3:15; Colossians 4:6'
+  },
+  {
+    id: 'abraham-lincoln',
+    name: 'Abraham Lincoln',
+    title: '16th President of the United States',
+    lifespan: '1809-1865',
+    description: 'Abraham Lincoln preserved the Union and ended slavery in the United States. His Gettysburg Address and Second Inaugural reflect profound theological reflection on divine providence and human sin. He recognized the Civil War as divine judgment for the sin of slavery, yet trusted in God\'s purposes for the nation.',
+    significance: 'Preserved the Union; issued Emancipation Proclamation; ended slavery; theological reflection on providence.',
+    scripturalReference: 'Genesis 9:6; Galatians 3:28'
+  },
+  {
+    id: 'dietrich-bonhoeffer',
+    name: 'Dietrich Bonhoeffer',
+    title: 'Theologian and Martyr',
+    lifespan: '1906-1945',
+    description: 'Dietrich Bonhoeffer, German pastor and theologian, opposed the Nazi regime and the German church\'s compromise with Hitler. His books The Cost of Discipleship and Life Together call Christians to radical obedience. He participated in the plot to assassinate Hitler and was executed in Flossenbürg concentration camp three weeks before its liberation.',
+    significance: 'Opposed Nazi regime; authored The Cost of Discipleship; martyr for the faith; witness against tyranny.',
+    scripturalReference: 'Matthew 16:24-26; Revelation 2:10'
+  },
+  {
+    id: 'aleksandr-solzhenitsyn',
+    name: 'Aleksandr Solzhenitsyn',
+    title: 'Author and Dissident',
+    lifespan: '1918-2008',
+    description: 'Aleksandr Solzhenitsyn, Russian writer and Nobel laureate, exposed the horrors of the Soviet gulag in The Gulag Archipelago. His Christian faith informed his critique of totalitarianism and his call for repentance. He warned the West against materialism and spiritual decline, urging a return to moral foundations.',
+    significance: 'Exposed Soviet gulags; Nobel laureate; Christian dissident; warned the West against spiritual decline.',
+    scripturalReference: 'John 8:32; Ephesians 5:11'
+  },
+  {
+    id: 'winston-churchill',
+    name: 'Winston Churchill',
+    title: 'Prime Minister and Statesman',
+    lifespan: '1874-1965',
+    description: 'Winston Churchill led Britain through its darkest hour against Nazi tyranny. His speeches rallied the free world: "We shall fight on the beaches... we shall never surrender." Though not orthodox in faith, he recognized the spiritual dimension of the struggle against evil and spoke of "Christian civilization" that must be defended.',
+    significance: 'Led Britain in World War II; rallied the free world; defended Western civilization; Nobel laureate in Literature.',
+    scripturalReference: 'Ecclesiastes 3:1-8; Proverbs 24:10'
+  },
+  {
+    id: 'ronald-reagan',
+    name: 'Ronald Reagan',
+    title: '40th President of the United States',
+    lifespan: '1911-2004',
+    description: 'Ronald Reagan, the "Great Communicator," restored American confidence after a decade of decline. His commitment to limited government, strong defense, and traditional values reflected his conservative convictions. He challenged the Soviet Union as an "evil empire" and called for the Berlin Wall to be torn down, contributing to the Cold War\'s end.',
+    significance: 'Restored American confidence; challenged Soviet tyranny; ended Cold War; champion of liberty and traditional values.',
+    scripturalReference: 'John 8:36; Galatians 5:1'
+  },
+  {
+    id: 'martin-luther-king-jr',
+    name: 'Martin Luther King Jr.',
+    title: 'Civil Rights Leader and Pastor',
+    lifespan: '1929-1968',
+    description: 'Martin Luther King Jr., Baptist pastor and civil rights leader, led the movement for racial equality through nonviolent resistance grounded in Christian conviction. His "Letter from Birmingham Jail" and "I Have a Dream" speech articulated the biblical basis for justice. He was assassinated in Memphis while supporting sanitation workers.',
+    significance: 'Led civil rights movement; advocated nonviolent resistance; grounded justice in Scripture; Nobel Peace Prize laureate.',
+    scripturalReference: 'Amos 5:24; Galatians 3:28; Matthew 5:9'
   }
 ];
 
@@ -552,7 +927,7 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
     quoteSource: 'Augustine, Confessions',
     imageUrl: '/images/periods/church-fathers.svg',
     imageAlt: 'Illustrated codex and quill for writings of the Church Fathers',
-    keyFigures: [philosophers[3]],
+    keyFigures: [churchFathers[3]],
     keyEvents: [
       {
         id: 'augustine-conversion',
@@ -625,7 +1000,7 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
     quoteSource: 'John Paul II, Fides et Ratio',
     imageUrl: '/images/periods/middle-ages.svg',
     imageAlt: 'Illustrated cathedral spires for medieval Christendom',
-    keyFigures: [philosophers[4]],
+    keyFigures: [medievalTheologians[0]],
     keyEvents: [
       {
         id: 'fall-rome',
@@ -672,7 +1047,7 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
     quoteSource: 'Romans 1:17',
     imageUrl: '/images/periods/reformation.svg',
     imageAlt: 'Illustrated hammer and document for the Protestant Reformation',
-    keyFigures: [philosophers[5]],
+    keyFigures: [reformers[0]],
     keyEvents: [
       {
         id: 'luther-theses',
@@ -935,72 +1310,72 @@ const periodSourceOverrides: Record<string, Source[]> = {
     { title: 'John 1:1-3 (ESV)', url: 'https://www.biblegateway.com/passage/?search=John%201%3A1-3&version=ESV', type: 'bible' },
   ],
   'ancient-near-east': [
-    { title: 'Ancient Near East', url: 'https://en.wikipedia.org/wiki/Ancient_Near_East', type: 'archaeological' },
+    { title: 'Metropolitan Museum: Ancient Near Eastern Art', url: 'https://www.metmuseum.org/about-the-met/collection-areas/ancient-near-eastern-art', type: 'historical' },
     { title: 'Genesis 11:1-9 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Genesis%2011%3A1-9&version=ESV', type: 'bible' },
   ],
   'ancient-egypt': [
-    { title: 'Ancient Egypt', url: 'https://en.wikipedia.org/wiki/Ancient_Egypt', type: 'archaeological' },
+    { title: 'British Museum: Ancient Egypt', url: 'https://www.britishmuseum.org/collection/ancient-egypt-sudan', type: 'historical' },
     { title: 'Exodus 1-15 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Exodus%201-15&version=ESV', type: 'bible' },
   ],
   'patriarchal-era': [
-    { title: 'Patriarchal Age', url: 'https://en.wikipedia.org/wiki/Patriarchal_age', type: 'archaeological' },
-    { title: 'Genesis 12-50 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Genesis%2012-50&version=ESV', type: 'bible' },
+    { title: 'Genesis 12-25 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Genesis%2012-25&version=ESV', type: 'bible' },
+    { title: 'Romans 4 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Romans%204&version=ESV', type: 'bible' },
   ],
   'exodus-period': [
-    { title: 'The Exodus', url: 'https://en.wikipedia.org/wiki/The_Exodus', type: 'archaeological' },
     { title: 'Exodus 1-20 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Exodus%201-20&version=ESV', type: 'bible' },
+    { title: 'Deuteronomy 5 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Deuteronomy%205&version=ESV', type: 'bible' },
   ],
   'israelite-kingdom': [
-    { title: 'Kingdom of Israel (United Monarchy)', url: 'https://en.wikipedia.org/wiki/Kingdom_of_Israel_(united_monarchy)', type: 'archaeological' },
     { title: '2 Samuel 7 (ESV)', url: 'https://www.biblegateway.com/passage/?search=2%20Samuel%207&version=ESV', type: 'bible' },
+    { title: '1 Kings 6-8 (ESV)', url: 'https://www.biblegateway.com/passage/?search=1%20Kings%206-8&version=ESV', type: 'bible' },
   ],
   'greek-philosophy': [
-    { title: 'Ancient Greek Philosophy', url: 'https://en.wikipedia.org/wiki/Ancient_Greek_philosophy', type: 'archaeological' },
-    { title: 'Internet Encyclopedia: Ancient Greek Philosophy', url: 'https://iep.utm.edu/ancient-greek-philosophy/', type: 'archaeological' },
+    { title: 'Internet Encyclopedia of Philosophy: Ancient Greek Philosophy', url: 'https://iep.utm.edu/ancient-greek-philosophy/', type: 'historical' },
+    { title: 'Stanford Encyclopedia: Presocratic Philosophy', url: 'https://plato.stanford.edu/entries/presocratics/', type: 'historical' },
   ],
   'roman-empire': [
-    { title: 'Roman Empire', url: 'https://en.wikipedia.org/wiki/Roman_Empire', type: 'archaeological' },
+    { title: 'Perseus Digital Library: Roman History', url: 'https://www.perseus.tufts.edu/hopper/collection?collection=Perseus:collection:Greco-Roman', type: 'primary' },
     { title: 'Galatians 4:4 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Galatians%204%3A4&version=ESV', type: 'bible' },
   ],
   'life-of-christ': [
-    { title: 'Life of Jesus', url: 'https://en.wikipedia.org/wiki/Life_of_Jesus', type: 'archaeological' },
+    { title: 'Matthew 1-28 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Matthew%201-28&version=ESV', type: 'bible' },
     { title: 'John 1:1-18 (ESV)', url: 'https://www.biblegateway.com/passage/?search=John%201%3A1-18&version=ESV', type: 'bible' },
   ],
   'early-church': [
-    { title: 'Early Christianity', url: 'https://en.wikipedia.org/wiki/Early_Christianity', type: 'archaeological' },
-    { title: 'Acts 2 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Acts%202&version=ESV', type: 'bible' },
+    { title: 'Acts 1-15 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Acts%201-15&version=ESV', type: 'bible' },
+    { title: 'Christian Classics Ethereal Library: Early Church Fathers', url: 'https://ccel.org/fathers/', type: 'primary' },
   ],
   'church-fathers': [
-    { title: 'Church Fathers', url: 'https://en.wikipedia.org/wiki/Church_Fathers', type: 'archaeological' },
-    { title: 'Augustine of Hippo', url: 'https://en.wikipedia.org/wiki/Augustine_of_Hippo', type: 'archaeological' },
+    { title: 'New Advent: Fathers of the Church', url: 'https://www.newadvent.org/fathers/', type: 'primary' },
+    { title: 'Augustine: Confessions (Christian Classics)', url: 'https://ccel.org/ccel/augustine/confessions.html', type: 'primary' },
   ],
   'constantinian-era': [
-    { title: 'Constantine the Great', url: 'https://en.wikipedia.org/wiki/Constantine_the_Great', type: 'archaeological' },
-    { title: 'First Council of Nicaea', url: 'https://en.wikipedia.org/wiki/First_Council_of_Nicaea', type: 'archaeological' },
+    { title: 'Fordham University: Edict of Milan', url: 'https://sourcebooks.fordham.edu/source/edict-milan.asp', type: 'primary' },
+    { title: 'Nicene Creed (Christian Classics)', url: 'https://ccel.org/creeds/nicene.html', type: 'primary' },
   ],
   'middle-ages': [
-    { title: 'Middle Ages', url: 'https://en.wikipedia.org/wiki/Middle_Ages', type: 'archaeological' },
-    { title: 'Chartres Cathedral', url: 'https://en.wikipedia.org/wiki/Chartres_Cathedral', type: 'archaeological' },
+    { title: 'Fordham University: Medieval Sourcebook', url: 'https://sourcebooks.fordham.edu/sbook1t.asp', type: 'primary' },
+    { title: 'Aquinas: Summa Theologiae (Christian Classics)', url: 'https://ccel.org/ccel/aquinas/summa.html', type: 'primary' },
   ],
   'reformation': [
-    { title: 'Protestant Reformation', url: 'https://en.wikipedia.org/wiki/Reformation', type: 'archaeological' },
-    { title: 'Ninety-Five Theses', url: 'https://en.wikipedia.org/wiki/Ninety-five_Theses', type: 'archaeological' },
+    { title: 'Ninety-Five Theses (Christian History Institute)', url: 'https://www.christianhistoryinstitute.org/institute/resource/ninety-five-theses/', type: 'primary' },
+    { title: 'Romans 1:16-17 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Romans%201%3A16-17&version=ESV', type: 'bible' },
   ],
   'american-founding': [
-    { title: 'Declaration of Independence (Transcript)', url: 'https://www.archives.gov/founding-docs/declaration-transcript', type: 'archaeological' },
-    { title: 'Constitution (Transcript)', url: 'https://www.archives.gov/founding-docs/constitution-transcript', type: 'archaeological' },
+    { title: 'Declaration of Independence (National Archives)', url: 'https://www.archives.gov/founding-docs/declaration-transcript', type: 'primary' },
+    { title: 'Constitution (National Archives)', url: 'https://www.archives.gov/founding-docs/constitution-transcript', type: 'primary' },
   ],
   'world-wars': [
-    { title: 'World War I', url: 'https://en.wikipedia.org/wiki/World_War_I', type: 'archaeological' },
-    { title: 'World War II', url: 'https://en.wikipedia.org/wiki/World_War_II', type: 'archaeological' },
+    { title: 'Imperial War Museums: World War I', url: 'https://www.iwm.org.uk/history/first-world-war', type: 'historical' },
+    { title: 'Imperial War Museums: World War II', url: 'https://www.iwm.org.uk/history/second-world-war', type: 'historical' },
   ],
   'cold-war': [
-    { title: 'Cold War', url: 'https://en.wikipedia.org/wiki/Cold_War', type: 'archaeological' },
-    { title: 'Fall of the Berlin Wall', url: 'https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall', type: 'archaeological' },
+    { title: 'National Archives: Cold War Documents', url: 'https://www.archives.gov/research/foreign-policy/cold-war', type: 'primary' },
+    { title: 'Reagan Library: Tear Down This Wall Speech', url: 'https://www.reaganlibrary.gov/archives/speech/june-12-1987-speech-brandenburg-gate-west-berlin', type: 'primary' },
   ],
   'modern-era': [
-    { title: '21st Century', url: 'https://en.wikipedia.org/wiki/21st_century', type: 'archaeological' },
     { title: 'Revelation 22:20-21 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Revelation%2022%3A20-21&version=ESV', type: 'bible' },
+    { title: 'Matthew 28:19-20 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Matthew%2028%3A19-20&version=ESV', type: 'bible' },
   ],
 };
 
@@ -1017,7 +1392,15 @@ export const historicalPeriods: HistoricalPeriod[] = baseHistoricalPeriods.map((
 });
 
 export function getAllFigures(): HistoricalFigure[] {
-  return [...biblicalFigures, ...philosophers];
+  return [
+    ...biblicalFigures,
+    ...philosophers,
+    ...churchFathers,
+    ...medievalTheologians,
+    ...reformers,
+    ...americanFounders,
+    ...modernFigures
+  ];
 }
 
 export function getFigureById(id: string): HistoricalFigure | undefined {

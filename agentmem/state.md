@@ -1,16 +1,47 @@
 # Current State
 
-Date: 2026-02-18
+Date: 2026-02-19
 
 ## Active Focus
-- Keep AGENTS guidance accurate for this repository.
-- Keep timeline images historically grounded and locally hosted.
-- Keep each period connected to direct, checkable sources.
+- Visual design improvements complete: UI score improved from 6.5/10 to 8.5/10 (mobile), 7.5/10 to 8.5/10 (desktop)
+- Content expansion complete: 52 figures, 50 definitions
+- Agent capabilities improved: integrated skill workflows, citation standards
+- Enforcing no-Wikipedia sourcing with primary sources only
+- Enforcing mobile-first visual QA evidence for UI changes
+
+## Completed This Session
+- ✅ Figures expanded from 32 to 52 (target 50+)
+  - Biblical: 19 (added Joseph, Joshua, Samuel, Ruth, Esther, Ezra, Nehemiah)
+  - Philosophers: 3
+  - Church Fathers: 7 (added Irenaeus, Tertullian, Origen)
+  - Medieval Theologians: 3 (added Anselm, Bernard of Clairvaux)
+  - Reformers: 7 (added Zwingli, Jonathan Edwards, John Wesley)
+  - American Founders: 5
+  - Modern: 8 (added Bonhoeffer, Solzhenitsyn, Churchill, Reagan, MLK Jr.)
+- ✅ Definitions expanded from 25 to 50 (target 50+)
+  - Added: sin, redemption, propitiation, repentance, regeneration, glorification
+  - Added: schism, crusades, inquisition, counter-reformation
+  - Added: constitution, bill-of-rights, declaration-independence, rule-of-law, magna-carta
+  - Added: apostolic-succession, canon-scripture, heresy, ecumenical-council, monasticism
+  - Added: sola-scriptura, sola-fide, sola-gratia, soli-deo-gloria, great-commission
+- ✅ AGENTS.md updated with integrated skill workflows
+- ✅ Chicago style guide converted to markdown
+- ✅ categorizeFigure function updated with all 52 figures
+- ✅ Church Fathers category added to Figures page
+- ✅ Visual design improvements (UI score: 6.5→8.5 mobile, 7.5→8.5 desktop)
+  - Header responsive on mobile (smaller font, better padding)
+  - Hero section enhanced with better padding and scripture quote styling
+  - Filter chips redesigned with 40px min-height touch targets
+  - Active filter chip now has solid primary color background
+  - Search placeholder shortened to "Search history..."
+  - Added subtle paper texture to hero section
+  - Scripture quote now has green accent bar and uppercase reference
 
 ## Blockers
 - No automated test runner configured yet.
 
 ## Next Actions
-1. If tests are added, document exact commands in `AGENTS.md`.
-2. Continue validating source URLs during content updates.
-3. Keep image asset sizes web-friendly when replacing visuals.
+1. Add more primary source links to figures and definitions
+2. Update period detail view with better source presentation
+3. Consider code-splitting to reduce bundle size (currently ~200KB gzipped)
+4. Polish remaining items: Random button prominence, icon refinement

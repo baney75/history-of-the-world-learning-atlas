@@ -12,3 +12,9 @@
 - Downloaded and compressed local JPG assets under `public/images/periods/`.
 - Added runtime override map for `imageUrl`, `imageAlt`, and direct `sources` per period in `src/data/historical-periods.ts`.
 - Rationale: replace generic illustrations with period-accurate imagery and direct references.
+
+## 2026-02-18 - AGENTS hardening for source policy + UI evidence gate
+- Updated local `AGENTS.md` with strict source policy: no Wikipedia use, Grokipedia discovery-only, and primary/official/public citations only.
+- Added required source capture to Markdown under `agentmem/sources/` for changed source sets.
+- Added mobile-first UI verification gate requiring screenshot + accessibility snapshot + console evidence at `390x844`, `360x800`, and `1280x720`.
+- Rationale: enforce truth-seeking source quality and objective visual QA before marking UI work complete.

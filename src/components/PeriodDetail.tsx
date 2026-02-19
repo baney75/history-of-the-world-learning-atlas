@@ -52,6 +52,9 @@ const sourceTypeLabel: Record<HistoricalPeriod['sources'][number]['type'], strin
   bible: 'Scripture',
   archaeological: 'History',
   grokipedia: 'Grokipedia',
+  theological: 'Theology',
+  historical: 'History',
+  primary: 'Primary Source',
 };
 
 function sourceHostname(url: string): string {
