@@ -69,7 +69,13 @@ const routeTree = rootRoute.addChildren([
   definitionDetailRoute,
 ]);
 
-export const router = createRouter({ routeTree });
+// Get base path from import.meta.env.BASE_URL (set by Vite)
+const basepath = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+
+export const router = createRouter({ 
+  routeTree,
+  basepath,
+});
 
 declare module '@tanstack/react-router' {
   interface Register {
