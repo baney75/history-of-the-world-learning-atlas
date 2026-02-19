@@ -36,7 +36,7 @@ export interface HistoricalEvent {
 export interface Source {
   title: string;
   url: string;
-  type: 'grokipedia' | 'bible' | 'archaeological' | 'theological' | 'historical' | 'primary';
+  type: 'bible' | 'archaeological' | 'theological' | 'historical' | 'primary' | 'academic';
 }
 
 export interface Definition {

@@ -526,8 +526,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Creationism', url: 'https://grokipedia.com/page/Creationism', type: 'grokipedia' },
-      { title: 'Bible', url: 'https://grokipedia.com/page/Bible', type: 'grokipedia' }
+      { title: 'Genesis 1-2 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Genesis%201-2&version=ESV', type: 'bible' },
+      { title: 'John 1:1-3 (ESV)', url: 'https://www.biblegateway.com/passage/?search=John%201%3A1-3&version=ESV', type: 'bible' }
     ]
   },
   {
@@ -560,7 +560,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Ancient Near East', url: 'https://grokipedia.com/page/Ancient_Near_East', type: 'grokipedia' }
+      { title: 'Met Museum: Ancient Near Eastern Art', url: 'https://www.metmuseum.org/about-the-met/collection-areas/ancient-near-eastern-art', type: 'historical' },
+      { title: 'Genesis 11 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Genesis%2011&version=ESV', type: 'bible' }
     ]
   },
   {
@@ -594,7 +595,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Ancient Egypt', url: 'https://grokipedia.com/page/Ancient_Egypt', type: 'grokipedia' }
+      { title: 'British Museum: Ancient Egypt', url: 'https://www.britishmuseum.org/collection/ancient-egypt-sudan', type: 'historical' },
+      { title: 'Exodus 1-15 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Exodus%201-15&version=ESV', type: 'bible' }
     ]
   },
   {
@@ -635,7 +637,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Abraham', url: 'https://grokipedia.com/page/Abraham', type: 'grokipedia' }
+      { title: 'Abraham (ESV)', url: 'https://www.biblegateway.com/passage/?search=Genesis%2012-25&version=ESV', type: 'bible' },
+      { title: 'Romans 4 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Romans%204&version=ESV', type: 'bible' }
     ]
   },
   {
@@ -677,8 +680,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Moses', url: 'https://grokipedia.com/page/Moses', type: 'grokipedia' },
-      { title: 'Israelites', url: 'https://grokipedia.com/page/Israelites', type: 'grokipedia' }
+      { title: 'Moses and the Exodus (ESV)', url: 'https://www.biblegateway.com/passage/?search=Exodus%201-20&version=ESV', type: 'bible' },
+      { title: 'Deuteronomy 5 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Deuteronomy%205&version=ESV', type: 'bible' }
     ]
   },
   {
@@ -727,9 +730,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Israelites', url: 'https://grokipedia.com/page/Israelites', type: 'grokipedia' },
-      { title: 'David', url: 'https://grokipedia.com/page/David', type: 'grokipedia' },
-      { title: 'Solomon', url: 'https://grokipedia.com/page/Solomon', type: 'grokipedia' }
+      { title: '2 Samuel 7 (ESV)', url: 'https://www.biblegateway.com/passage/?search=2%20Samuel%207&version=ESV', type: 'bible' },
+      { title: '1 Kings 6-8 (ESV)', url: 'https://www.biblegateway.com/passage/?search=1%20Kings%206-8&version=ESV', type: 'bible' }
     ]
   },
   {
@@ -768,9 +770,9 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Ancient Greece', url: 'https://grokipedia.com/page/Ancient_Greece', type: 'grokipedia' },
-      { title: 'Plato', url: 'https://grokipedia.com/page/Plato', type: 'grokipedia' },
-      { title: 'Aristotle', url: 'https://grokipedia.com/page/Aristotle', type: 'grokipedia' }
+      { title: 'IEP: Ancient Greek Philosophy', url: 'https://iep.utm.edu/ancient-greek-philosophy/', type: 'historical' },
+      { title: 'SEP: Presocratic Philosophy', url: 'https://plato.stanford.edu/entries/presocratics/', type: 'historical' },
+      { title: 'Perseus Digital Library', url: 'https://www.perseus.tufts.edu/hopper/collection?collection=Perseus:collection:Greco-Roman', type: 'primary' }
     ]
   },
   {
@@ -812,7 +814,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Roman Empire', url: 'https://grokipedia.com/page/Roman_Empire', type: 'grokipedia' }
+      { title: 'Galatians 4:4 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Galatians%204%3A4&version=ESV', type: 'bible' },
+      { title: 'Luke 2 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Luke%202&version=ESV', type: 'bible' }
     ]
   },
   {
@@ -870,7 +873,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Jesus', url: 'https://grokipedia.com/page/Jesus', type: 'grokipedia' }
+      { title: 'Matthew 1-28 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Matthew%201-28&version=ESV', type: 'bible' },
+      { title: 'John 1:1-18 (ESV)', url: 'https://www.biblegateway.com/passage/?search=John%201%3A1-18&version=ESV', type: 'bible' }
     ]
   },
   {
@@ -912,8 +916,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Christianity', url: 'https://grokipedia.com/page/Christianity', type: 'grokipedia' },
-      { title: 'Paul the Apostle', url: 'https://grokipedia.com/page/Paul_the_Apostle', type: 'grokipedia' }
+      { title: 'Acts 1-15 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Acts%201-15&version=ESV', type: 'bible' },
+      { title: 'Early Church Fathers (CCEL)', url: 'https://ccel.org/fathers/', type: 'primary' }
     ]
   },
   {
@@ -946,7 +950,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Augustine of Hippo', url: 'https://grokipedia.com/page/Augustine_of_Hippo', type: 'grokipedia' }
+      { title: 'New Advent: Augustine', url: 'https://www.newadvent.org/fathers/', type: 'primary' },
+      { title: 'Augustine\'s Confessions (CCEL)', url: 'https://ccel.org/ccel/augustine/confessions.html', type: 'primary' }
     ]
   },
   {
@@ -986,7 +991,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Constantine the Great', url: 'https://grokipedia.com/page/Constantine_the_Great', type: 'grokipedia' }
+      { title: 'Council of Nicaea (New Advent)', url: 'https://www.newadvent.org/fathers/3801.htm', type: 'primary' },
+      { title: 'Nicene Creed', url: 'https://www.newadvent.org/cathen/11044a.htm', type: 'historical' }
     ]
   },
   {
@@ -1032,8 +1038,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Middle Ages', url: 'https://grokipedia.com/page/Middle_Ages', type: 'grokipedia' },
-      { title: 'Thomas Aquinas', url: 'https://grokipedia.com/page/Thomas_Aquinas', type: 'grokipedia' }
+      { title: 'SEP: Aquinas', url: 'https://plato.stanford.edu/entries/aquinas/', type: 'historical' },
+      { title: 'Summa Theologiae (New Advent)', url: 'https://www.newadvent.org/summa/', type: 'primary' }
     ]
   },
   {
@@ -1072,8 +1078,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Reformation', url: 'https://grokipedia.com/page/Reformation', type: 'grokipedia' },
-      { title: 'Martin Luther', url: 'https://grokipedia.com/page/Martin_Luther', type: 'grokipedia' }
+      { title: 'Romans 1:16-17 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Romans%201%3A16-17&version=ESV', type: 'bible' },
+      { title: 'Luther\'s 95 Theses', url: 'https://www.luther.de/en/95thesen.html', type: 'primary' }
     ]
   },
   {
@@ -1113,8 +1119,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'United States', url: 'https://grokipedia.com/page/United_States', type: 'grokipedia' },
-      { title: 'American Revolution', url: 'https://grokipedia.com/page/American_Revolution', type: 'grokipedia' }
+      { title: 'Declaration of Independence', url: 'https://www.archives.gov/founding-docs/declaration-transcript', type: 'primary' },
+      { title: 'U.S. Constitution', url: 'https://www.archives.gov/founding-docs/constitution-transcript', type: 'primary' }
     ]
   },
   {
@@ -1153,7 +1159,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'World War II', url: 'https://grokipedia.com/page/World_War_II', type: 'grokipedia' }
+      { title: 'Imperial War Museums', url: 'https://www.iwm.org.uk/history', type: 'historical' },
+      { title: 'National WWII Museum', url: 'https://www.nationalww2museum.org/', type: 'historical' }
     ]
   },
   {
@@ -1192,7 +1199,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Cold War', url: 'https://grokipedia.com/page/Cold_War', type: 'grokipedia' }
+      { title: 'NATO History', url: 'https://www.nato.int/cps/en/natohq/declassified.htm', type: 'historical' },
+      { title: 'Reagan Library: Berlin Wall', url: 'https://www.reaganlibrary.gov/research/collections/berlin-wall', type: 'historical' }
     ]
   },
   {
@@ -1224,7 +1232,8 @@ const baseHistoricalPeriods: HistoricalPeriod[] = [
       }
     ],
     sources: [
-      { title: 'Christianity', url: 'https://grokipedia.com/page/Christianity', type: 'grokipedia' }
+      { title: 'Revelation 22:20 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Revelation%2022%3A20&version=ESV', type: 'bible' },
+      { title: 'Matthew 28:18-20 (ESV)', url: 'https://www.biblegateway.com/passage/?search=Matthew%2028%3A18-20&version=ESV', type: 'bible' }
     ]
   }
 ];

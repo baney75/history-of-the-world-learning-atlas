@@ -50,11 +50,11 @@ function resolveAssetUrl(url?: string): string | undefined {
 
 const sourceTypeLabel: Record<HistoricalPeriod['sources'][number]['type'], string> = {
   bible: 'Scripture',
-  archaeological: 'History',
-  grokipedia: 'Grokipedia',
+  archaeological: 'Archaeology',
   theological: 'Theology',
   historical: 'History',
   primary: 'Primary Source',
+  academic: 'Academic',
 };
 
 function sourceHostname(url: string): string {
