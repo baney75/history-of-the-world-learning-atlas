@@ -4,7 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1]
-const pagesBase = process.env.GITHUB_ACTIONS === 'true' && repositoryName
+const isGitHubPages = process.env.GITHUB_PAGES === 'true' || process.env.GITHUB_ACTIONS === 'true'
+const pagesBase = isGitHubPages && repositoryName
   ? `/${repositoryName}/`
   : '/'
 
