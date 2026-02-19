@@ -12,6 +12,9 @@ const pagesBase = isGitHubPages && repositoryName
 export default defineConfig({
   base: pagesBase,
   plugins: [react(), tailwindcss()],
+  define: {
+    __BASE_PATH__: JSON.stringify(pagesBase.replace(/\/$/, '') || '/'),
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

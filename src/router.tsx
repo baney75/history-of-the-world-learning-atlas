@@ -69,8 +69,10 @@ const routeTree = rootRoute.addChildren([
   definitionDetailRoute,
 ]);
 
-// Get base path from import.meta.env.BASE_URL (set by Vite)
-const basepath = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+// Get base path from Vite's BASE_URL environment variable
+// This is injected at build time by Vite
+declare const __BASE_PATH__: string;
+const basepath = typeof __BASE_PATH__ !== 'undefined' ? __BASE_PATH__ : '/';
 
 export const router = createRouter({ 
   routeTree,
