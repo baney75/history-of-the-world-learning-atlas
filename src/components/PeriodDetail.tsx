@@ -112,7 +112,6 @@ export function PeriodDetail({
       initial="hidden"
       animate="visible"
       className="space-y-8"
-      layoutId={`period-card-container-${period.id}`}
     >
       <motion.div variants={itemVariants} className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <div className="flex items-center gap-2.5">
@@ -139,10 +138,8 @@ export function PeriodDetail({
           variants={itemVariants} 
           style={{ y: imageY }}
           className="relative h-80 md:h-[28rem] rounded-3xl overflow-hidden"
-          layoutId={`period-image-container-${period.id}`}
         >
-          <motion.img
-            layoutId={`period-image-${period.id}`}
+          <img
             src={imageSrc}
             alt={period.imageAlt || period.title}
             className="w-full h-[110%] object-cover -translate-y-[5%]"
@@ -157,11 +154,9 @@ export function PeriodDetail({
             <Badge variant="secondary" className="text-xs mb-3 bg-background/50 backdrop-blur-sm border-0">
               {period.era}
             </Badge>
-            <motion.div layoutId={`period-title-container-${period.id}`}>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-foreground">
-                {period.title}
-              </h1>
-            </motion.div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
+              {period.title}
+            </h1>
             <p className="text-xl text-muted-foreground italic mt-3">{period.subtitle}</p>
           </div>
         </motion.div>
@@ -173,11 +168,9 @@ export function PeriodDetail({
             <Badge variant="secondary" className="text-xs">
               {period.era}
             </Badge>
-            <motion.div layoutId={`period-title-container-${period.id}`}>
-              <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight">
-                {period.title}
-              </h1>
-            </motion.div>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+              {period.title}
+            </h1>
             <p className="text-xl text-muted-foreground italic">{period.subtitle}</p>
           </div>
         </motion.div>
@@ -218,7 +211,7 @@ export function PeriodDetail({
           <motion.div variants={itemVariants}>
             <section className="prose prose-stone dark:prose-invert max-w-none">
               <div className="flex items-center gap-3 mb-6">
-                <h2 className="text-2xl font-serif font-medium m-0">Historical Overview</h2>
+                <h2 className="text-2xl font-medium m-0">Historical Overview</h2>
                 <div className="h-px bg-border flex-1 ml-4 hidden sm:block" />
               </div>
               <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
@@ -257,7 +250,7 @@ export function PeriodDetail({
           {period.keyEvents.length > 0 && (
             <motion.div variants={itemVariants} className="mt-4">
               <div className="flex items-center gap-3 mb-6">
-                <h2 className="text-2xl font-serif font-medium m-0">Key Events</h2>
+                <h2 className="text-2xl font-medium m-0">Key Events</h2>
               </div>
               <div className="bg-card rounded-2xl border border-border/40 p-1">
                 <ScrollArea className="h-[400px] px-5 py-4">
@@ -311,22 +304,24 @@ export function PeriodDetail({
           </Card>
         </motion.div>
       )}
-
-    
+        </div>
+      </div>
 
       <motion.div variants={itemVariants}>
-        <Card className="border-border/30">
-          <CardContent className="pt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <Button variant="outline" onClick={onPrevious} disabled={!hasPrevious} className="justify-between">
-              <span className="inline-flex items-center gap-1.5"><ChevronLeft className="h-4 w-4" /> Previous Period</span>
-              <span className="text-xs text-muted-foreground">Review</span>
-            </Button>
-            <Button variant="outline" onClick={onNext} disabled={!hasNext} className="justify-between">
-              <span className="inline-flex items-center gap-1.5">Next Period <ChevronRight className="h-4 w-4" /></span>
-              <span className="text-xs text-muted-foreground">Continue</span>
-            </Button>
-          </CardContent>
-        </Card>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Button variant="outline" onClick={onPrevious} disabled={!hasPrevious} className="flex-1 h-auto py-3 px-4">
+            <span className="flex flex-col items-start w-full">
+              <span className="inline-flex items-center gap-1.5 text-sm"><ChevronLeft className="h-4 w-4" /> Previous Period</span>
+              <span className="text-xs text-muted-foreground ml-5.5">Review</span>
+            </span>
+          </Button>
+          <Button variant="outline" onClick={onNext} disabled={!hasNext} className="flex-1 h-auto py-3 px-4">
+            <span className="flex flex-col items-end w-full">
+              <span className="inline-flex items-center gap-1.5 text-sm">Next Period <ChevronRight className="h-4 w-4" /></span>
+              <span className="text-xs text-muted-foreground mr-5.5">Continue</span>
+            </span>
+          </Button>
+        </div>
       </motion.div>
 
       <motion.div variants={itemVariants}>
@@ -384,9 +379,7 @@ export function PeriodDetail({
             </ul>
           </CardContent>
         </Card>
-          </motion.div>
-        </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

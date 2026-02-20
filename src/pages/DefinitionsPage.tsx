@@ -35,7 +35,7 @@ function DefinitionCard({ definition, onSelect }: DefinitionCardProps) {
           onClick={() => onSelect(definition)}
           className="text-left w-full"
         >
-          <h3 className="font-serif text-lg font-medium leading-tight hover:text-primary transition">
+          <h3 className="text-lg font-medium leading-tight hover:text-primary transition">
             {definition.term}
           </h3>
         </button>
@@ -103,7 +103,7 @@ function DefinitionDetail({ definition, onBack }: DefinitionDetailProps) {
         <Badge variant="outline" className="mb-2">
           {categoryLabels[definition.category as DefinitionCategory] || definition.category}
         </Badge>
-        <h1 className="font-serif text-3xl md:text-4xl font-medium tracking-tight">{definition.term}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight">{definition.term}</h1>
       </header>
       
       <section className="prose prose-sm max-w-none">
@@ -112,7 +112,7 @@ function DefinitionDetail({ definition, onBack }: DefinitionDetailProps) {
       
       {definition.scriptureReferences.length > 0 && (
         <section className="rounded-xl border border-border/40 bg-card/50 p-4">
-          <h2 className="font-serif text-lg font-medium mb-3">Scripture References</h2>
+          <h2 className="text-lg font-medium mb-3">Scripture References</h2>
           <ul className="space-y-1">
             {definition.scriptureReferences.map((ref) => (
               <li key={ref}>
@@ -133,7 +133,7 @@ function DefinitionDetail({ definition, onBack }: DefinitionDetailProps) {
       
       {relatedFigureData.length > 0 && (
         <section className="rounded-xl border border-border/40 bg-card/50 p-4">
-          <h2 className="font-serif text-lg font-medium mb-3">Related Figures</h2>
+          <h2 className="text-lg font-medium mb-3">Related Figures</h2>
           <div className="flex flex-wrap gap-2">
             {relatedFigureData.map(figure => (
               <Link
@@ -152,7 +152,7 @@ function DefinitionDetail({ definition, onBack }: DefinitionDetailProps) {
       
       {relatedPeriodData.length > 0 && (
         <section className="rounded-xl border border-border/40 bg-card/50 p-4">
-          <h2 className="font-serif text-lg font-medium mb-3">Appears in Periods</h2>
+          <h2 className="text-lg font-medium mb-3">Appears in Periods</h2>
           <div className="flex flex-wrap gap-2">
             {relatedPeriodData.map(period => (
               <Link
@@ -170,7 +170,7 @@ function DefinitionDetail({ definition, onBack }: DefinitionDetailProps) {
       
       {relatedDefs.length > 0 && (
         <section className="rounded-xl border border-border/40 bg-card/50 p-4">
-          <h2 className="font-serif text-lg font-medium mb-3">Related Terms</h2>
+          <h2 className="text-lg font-medium mb-3">Related Terms</h2>
           <div className="flex flex-wrap gap-2">
             {relatedDefs.map(rel => (
               <Badge
@@ -188,7 +188,7 @@ function DefinitionDetail({ definition, onBack }: DefinitionDetailProps) {
       
       {definition.sources.length > 0 && (
         <section className="rounded-xl border border-border/40 bg-card/50 p-4">
-          <h2 className="font-serif text-lg font-medium mb-3">Sources</h2>
+          <h2 className="text-lg font-medium mb-3">Sources</h2>
           <ul className="space-y-1">
             {definition.sources.map((source) => (
               <li key={source.url}>
@@ -251,7 +251,7 @@ export default function DefinitionsPage() {
             </div>
             <div className="flex items-center gap-2">
               <BookOpen className="h-5 w-5 text-primary" aria-hidden="true" />
-              <h1 className="font-serif text-xl font-medium tracking-tight">Definitions</h1>
+              <h1 className="text-xl font-medium tracking-tight">Definitions</h1>
             </div>
             <div className="w-20" />
           </div>
@@ -279,7 +279,7 @@ export default function DefinitionsPage() {
           </div>
           <div className="flex items-center gap-2">
             <BookOpen className="h-5 w-5 text-primary" aria-hidden="true" />
-            <h1 className="font-serif text-xl font-medium tracking-tight">Definitions</h1>
+            <h1 className="text-xl font-medium tracking-tight">Definitions</h1>
           </div>
           <div className="w-20" />
         </div>
@@ -337,7 +337,7 @@ export default function DefinitionsPage() {
           </ScrollArea>
         ) : (
           <div className="rounded-2xl border border-border/40 bg-card/80 p-7 text-center">
-            <h3 className="font-serif text-2xl">No terms found</h3>
+            <h3 className="text-2xl">No terms found</h3>
             <p className="text-sm text-muted-foreground mt-2">
               Try different keywords or switch categories.
             </p>

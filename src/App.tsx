@@ -414,7 +414,7 @@ export default function App() {
                 className="h-5 w-5 text-primary shrink-0"
                 aria-hidden="true"
               />
-              <h1 className="font-serif text-base sm:text-lg md:text-xl font-medium tracking-tight leading-tight">
+              <h1 className="text-base sm:text-lg md:text-xl font-medium tracking-tight leading-tight">
                 History of the Western World
               </h1>
             </Link>
@@ -503,7 +503,7 @@ export default function App() {
                     <p className="caption text-primary/80 mb-3 sm:mb-4">
                       The Story of God&apos;s Dealings with Mankind
                     </p>
-                    <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight max-w-4xl mx-auto">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-4xl mx-auto">
                       History of the Western World
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed mt-4 sm:mt-6 text-sm sm:text-base md:text-[1.08rem]">
@@ -671,7 +671,7 @@ export default function App() {
                     </ScrollArea>
                   ) : (
                     <div className="rounded-2xl border border-border/40 bg-card/80 p-7 text-center">
-                      <h3 className="font-serif text-2xl">No periods found</h3>
+                      <h3 className="text-2xl">No periods found</h3>
                       <p className="text-sm text-muted-foreground mt-2">
                         Try different keywords, switch lens, or clear filters to
                         return to the full timeline.

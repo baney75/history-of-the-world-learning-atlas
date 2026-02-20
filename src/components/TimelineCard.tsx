@@ -1,9 +1,15 @@
-import { motion, type Variants } from 'motion/react';
-import type { HistoricalPeriod } from '@/types/history';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import { BookOpen, Calendar, Users } from 'lucide-react';
+import { motion, type Variants } from "motion/react";
+import type { HistoricalPeriod } from "@/types/history";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { BookOpen, Calendar, Users } from "lucide-react";
 
 interface TimelineCardProps {
   period: HistoricalPeriod;
@@ -30,14 +36,19 @@ function resolveAssetUrl(url?: string): string | undefined {
     return undefined;
   }
 
-  if (url.startsWith('/')) {
+  if (url.startsWith("/")) {
     return `${import.meta.env.BASE_URL}${url.slice(1)}`;
   }
 
   return url;
 }
 
-export function TimelineCard({ period, index, onSelect, isFeatured = false }: TimelineCardProps) {
+export function TimelineCard({
+  period,
+  index,
+  onSelect,
+  isFeatured = false,
+}: TimelineCardProps) {
   const imageSrc = resolveAssetUrl(period.imageUrl);
 
   return (
@@ -45,11 +56,10 @@ export function TimelineCard({ period, index, onSelect, isFeatured = false }: Ti
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '-80px' }}
+      viewport={{ once: true, margin: "-80px" }}
       custom={index}
       className="h-full"
-      layoutId={`period-card-container-${period.id}`}
-      whileHover={{ y: -4, scale: 1.01, rotate: index % 2 === 0 ? 0.5 : -0.5 }}
+      whileHover={{ y: -4, scale: 1.01 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 400, damping: 25 }}
     >
@@ -58,12 +68,12 @@ export function TimelineCard({ period, index, onSelect, isFeatured = false }: Ti
           hover:shadow-[0_8px_30px_rgb(143,170,143,0.12)] 
           focus-within:ring-2 focus-within:ring-ring/50 border-border/30 
           card-accent relative h-full flex flex-col bg-card
-          ${isFeatured ? 'hover:shadow-[0_12px_40px_rgb(143,170,143,0.15)]' : ''}`}
+          ${isFeatured ? "hover:shadow-[0_12px_40px_rgb(143,170,143,0.15)]" : ""}`}
         onClick={() => onSelect(period.id)}
         role="button"
         tabIndex={0}
         onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
+          if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
             onSelect(period.id);
           }
@@ -71,49 +81,52 @@ export function TimelineCard({ period, index, onSelect, isFeatured = false }: Ti
         aria-label={`View details for ${period.title}`}
       >
         {imageSrc && (
-          <motion.div 
-            layoutId={`period-image-container-${period.id}`}
-            className={`relative overflow-hidden ${isFeatured ? 'h-56 md:h-64' : 'h-40'}`}
+          <div
+            className={`relative overflow-hidden ${isFeatured ? "h-56 md:h-64" : "h-40"}`}
           >
-            <motion.img
-              layoutId={`period-image-${period.id}`}
+            <img
               src={imageSrc}
               alt={period.imageAlt || period.title}
               className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               width={1200}
               height={600}
-              loading={index < 2 ? 'eager' : 'lazy'}
-              fetchPriority={index === 0 ? 'high' : 'auto'}
+              loading={index < 2 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
               decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-4">
-              <Badge variant="secondary" className="text-xs bg-background/70 backdrop-blur-sm border-0 text-muted-foreground">
+              <Badge
+                variant="secondary"
+                className="text-xs bg-background/70 backdrop-blur-sm border-0 text-muted-foreground"
+              >
                 {period.era}
               </Badge>
             </div>
-          </motion.div>
+          </div>
         )}
-        <CardHeader className={`pb-3 pt-4 ${isFeatured ? 'md:pt-5' : ''}`}>
+        <CardHeader className={`pb-3 pt-4 ${isFeatured ? "md:pt-5" : ""}`}>
           {!period.imageUrl && (
             <Badge variant="secondary" className="text-xs w-fit mb-2">
               {period.era}
             </Badge>
           )}
-          <motion.div layoutId={`period-title-container-${period.id}`}>
-            <CardTitle className={`font-serif leading-tight group-hover:text-primary transition-colors duration-300 ${isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'}`}>
-              {period.title}
-            </CardTitle>
-          </motion.div>
+          <CardTitle
+            className={`leading-tight group-hover:text-primary transition-colors duration-300 ${isFeatured ? "text-2xl md:text-3xl" : "text-xl"}`}
+          >
+            {period.title}
+          </CardTitle>
           <CardDescription className="text-sm italic text-muted-foreground mt-1">
             {period.subtitle}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4 pb-5 flex-1 flex flex-col">
-          <p className={`text-sm text-muted-foreground line-clamp-3 leading-relaxed ${isFeatured ? 'text-base' : ''}`}>
+          <p
+            className={`text-sm text-muted-foreground line-clamp-3 leading-relaxed ${isFeatured ? "text-base" : ""}`}
+          >
             {period.description}
           </p>
-          
+
           {period.quote && (
             <blockquote className="border-l-2 border-primary/25 pl-3 py-1 mt-auto">
               <p className="text-xs italic text-foreground/70 line-clamp-2 leading-relaxed">
@@ -153,7 +166,7 @@ export function TimelineCard({ period, index, onSelect, isFeatured = false }: Ti
 }
 
 interface TimelineEventProps {
-  event: HistoricalPeriod['keyEvents'][0];
+  event: HistoricalPeriod["keyEvents"][0];
   index: number;
 }
 
@@ -165,7 +178,7 @@ const eventVariants: Variants = {
     transition: {
       delay: i * 0.04,
       duration: 0.4,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   }),
 };

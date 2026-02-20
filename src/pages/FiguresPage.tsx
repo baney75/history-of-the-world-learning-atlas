@@ -79,7 +79,7 @@ function FigureCard({ figure }: FigureCardProps) {
   return (
     <article className="group rounded-2xl border border-border/40 bg-card/70 p-5 shadow-sm backdrop-blur-sm transition-all hover:shadow-md hover:border-primary/30">
       <header className="mb-3">
-        <h3 className="font-serif text-lg font-medium leading-tight">{figure.name}</h3>
+        <h3 className="text-lg font-medium leading-tight">{figure.name}</h3>
         {figure.title && (
           <p className="text-sm text-muted-foreground mt-0.5">{figure.title}</p>
         )}
@@ -172,7 +172,7 @@ export default function FiguresPage() {
           </div>
           <div className="flex items-center gap-2">
             <Users className="h-5 w-5 text-primary" aria-hidden="true" />
-            <h1 className="font-serif text-xl font-medium tracking-tight">Figures Library</h1>
+            <h1 className="text-xl font-medium tracking-tight">Figures Library</h1>
           </div>
           <div className="w-20" />
         </div>
@@ -230,7 +230,7 @@ export default function FiguresPage() {
           </ScrollArea>
         ) : (
           <div className="rounded-2xl border border-border/40 bg-card/80 p-7 text-center">
-            <h3 className="font-serif text-2xl">No figures found</h3>
+            <h3 className="text-2xl">No figures found</h3>
             <p className="text-sm text-muted-foreground mt-2">
               Try different keywords or switch categories.
             </p>
