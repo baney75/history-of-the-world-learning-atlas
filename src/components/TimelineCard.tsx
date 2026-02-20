@@ -48,13 +48,16 @@ export function TimelineCard({ period, index, onSelect, isFeatured = false }: Ti
       viewport={{ once: true, margin: '-80px' }}
       custom={index}
       className="h-full"
+      layoutId={`period-card-container-${period.id}`}
+      whileHover={{ y: -4, scale: 1.01, rotate: index % 2 === 0 ? 0.5 : -0.5 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ type: "spring", stiffness: 400, damping: 25 }}
     >
       <Card
-        className={`group cursor-pointer overflow-hidden transition-all duration-300 
+        className={`group cursor-pointer overflow-hidden 
           hover:shadow-[0_8px_30px_rgb(143,170,143,0.12)] 
-          hover:-translate-y-1 
           focus-within:ring-2 focus-within:ring-ring/50 border-border/30 
-          card-accent relative h-full flex flex-col
+          card-accent relative h-full flex flex-col bg-card
           ${isFeatured ? 'hover:shadow-[0_12px_40px_rgb(143,170,143,0.15)]' : ''}`}
         onClick={() => onSelect(period.id)}
         role="button"
@@ -68,11 +71,15 @@ export function TimelineCard({ period, index, onSelect, isFeatured = false }: Ti
         aria-label={`View details for ${period.title}`}
       >
         {imageSrc && (
-          <div className={`relative overflow-hidden ${isFeatured ? 'h-56 md:h-64' : 'h-40'}`}>
-            <img
+          <motion.div 
+            layoutId={`period-image-container-${period.id}`}
+            className={`relative overflow-hidden ${isFeatured ? 'h-56 md:h-64' : 'h-40'}`}
+          >
+            <motion.img
+              layoutId={`period-image-${period.id}`}
               src={imageSrc}
               alt={period.imageAlt || period.title}
-              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               width={1200}
               height={600}
               loading={index < 2 ? 'eager' : 'lazy'}
@@ -85,7 +92,7 @@ export function TimelineCard({ period, index, onSelect, isFeatured = false }: Ti
                 {period.era}
               </Badge>
             </div>
-          </div>
+          </motion.div>
         )}
         <CardHeader className={`pb-3 pt-4 ${isFeatured ? 'md:pt-5' : ''}`}>
           {!period.imageUrl && (
@@ -93,10 +100,12 @@ export function TimelineCard({ period, index, onSelect, isFeatured = false }: Ti
               {period.era}
             </Badge>
           )}
-          <CardTitle className={`font-serif leading-snug group-hover:text-primary transition-colors duration-300 ${isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'}`}>
-            {period.title}
-          </CardTitle>
-          <CardDescription className="text-sm italic text-muted-foreground">
+          <motion.div layoutId={`period-title-container-${period.id}`}>
+            <CardTitle className={`font-serif leading-tight group-hover:text-primary transition-colors duration-300 ${isFeatured ? 'text-2xl md:text-3xl' : 'text-xl'}`}>
+              {period.title}
+            </CardTitle>
+          </motion.div>
+          <CardDescription className="text-sm italic text-muted-foreground mt-1">
             {period.subtitle}
           </CardDescription>
         </CardHeader>
