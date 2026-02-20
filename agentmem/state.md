@@ -3,11 +3,9 @@
 Date: 2026-02-19
 
 ## Active Focus
-- Visual design improvements complete: UI score improved from 6.5/10 to 8.5/10 (mobile), 7.5/10 to 8.5/10 (desktop)
-- Content expansion complete: 52 figures, 50 definitions
-- Agent capabilities improved: integrated skill workflows, citation standards
-- Enforcing no-Wikipedia sourcing with primary sources only
-- Enforcing mobile-first visual QA evidence for UI changes
+- All sources verified: NO Wikipedia, NO Grokipedia citations
+- All sources are primary/academic: BibleGateway, National Archives, Stanford Encyclopedia, New Advent, CCEL, etc.
+- Site deployed and working at https://baney75.github.io/history-of-the-world-learning-atlas/
 
 ## Completed This Session
 - ✅ Figures expanded from 32 to 52 (target 50+)
@@ -36,6 +34,15 @@ Date: 2026-02-19
   - Search placeholder shortened to "Search history..."
   - Added subtle paper texture to hero section
   - Scripture quote now has green accent bar and uppercase reference
+- ✅ Source audit complete - ALL Wikipedia and Grokipedia sources removed
+  - Replaced 28 Grokipedia URLs with primary/academic sources
+  - Scripture: BibleGateway ESV
+  - Church history: New Advent Catholic Encyclopedia, CCEL
+  - Philosophy: Stanford Encyclopedia of Philosophy, IEP
+  - American history: National Archives
+  - Modern history: NATO, Reagan Library, Imperial War Museums
+  - Updated Source type to remove 'grokipedia', add 'academic'
+  - Updated PeriodDetail source labels
 
 ## Blockers
 - No automated test runner configured yet.
@@ -44,4 +51,3 @@ Date: 2026-02-19
 1. Add more primary source links to figures and definitions
 2. Update period detail view with better source presentation
 3. Consider code-splitting to reduce bundle size (currently ~200KB gzipped)
-4. Polish remaining items: Random button prominence, icon refinement
