@@ -139,18 +139,18 @@ export function PeriodDetail({
           style={{ y: imageY }}
           className="relative h-80 md:h-[28rem] rounded-3xl overflow-hidden"
         >
-          <img
-            src={imageSrc}
-            alt={period.imageAlt || period.title}
-            className="w-full h-[110%] object-cover -translate-y-[5%]"
-            width={1200}
-            height={600}
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
+          <div className="absolute inset-0 z-0">
+            <img
+              src={imageSrc}
+              alt={period.imageAlt || period.title}
+              className="w-full h-full object-cover sm:object-center opacity-[0.85] dark:opacity-[0.65]"
+              fetchPriority="high"
+            />
+            {/* Darker, multi-stop gradient for perfect text contrast on the hero image */}
+            <div className="absolute inset-0 bg-linear-to-b from-background/90 via-background/60 to-background" />
+            <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent" />
+          </div>
+          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10 z-10">
             <Badge variant="secondary" className="text-xs mb-3 bg-background/50 backdrop-blur-sm border-0">
               {period.era}
             </Badge>
@@ -309,17 +309,23 @@ export function PeriodDetail({
 
       <motion.div variants={itemVariants}>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Button variant="outline" onClick={onPrevious} disabled={!hasPrevious} className="flex-1 h-auto py-3 px-4">
-            <span className="flex flex-col items-start w-full">
-              <span className="inline-flex items-center gap-1.5 text-sm"><ChevronLeft className="h-4 w-4" /> Previous Period</span>
-              <span className="text-xs text-muted-foreground ml-5.5">Review</span>
-            </span>
+          <Button variant="outline" onClick={onPrevious} disabled={!hasPrevious} className="flex-1 h-auto py-3 px-4 flex justify-start">
+            <div className="flex flex-row items-center gap-3">
+              <ChevronLeft className="h-5 w-5 text-muted-foreground/70" />
+              <div className="flex flex-col items-start gap-0.5">
+                <span className="text-sm font-medium">Previous Period</span>
+                <span className="text-xs text-muted-foreground">Review</span>
+              </div>
+            </div>
           </Button>
-          <Button variant="outline" onClick={onNext} disabled={!hasNext} className="flex-1 h-auto py-3 px-4">
-            <span className="flex flex-col items-end w-full">
-              <span className="inline-flex items-center gap-1.5 text-sm">Next Period <ChevronRight className="h-4 w-4" /></span>
-              <span className="text-xs text-muted-foreground mr-5.5">Continue</span>
-            </span>
+          <Button variant="outline" onClick={onNext} disabled={!hasNext} className="flex-1 h-auto py-3 px-4 flex justify-end">
+            <div className="flex flex-row items-center gap-3">
+              <div className="flex flex-col items-end gap-0.5">
+                <span className="text-sm font-medium">Next Period</span>
+                <span className="text-xs text-muted-foreground">Continue</span>
+              </div>
+              <ChevronRight className="h-5 w-5 text-muted-foreground/70" />
+            </div>
           </Button>
         </div>
       </motion.div>

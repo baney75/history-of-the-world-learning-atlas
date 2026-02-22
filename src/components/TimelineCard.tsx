@@ -82,23 +82,28 @@ export function TimelineCard({
       >
         {imageSrc && (
           <div
-            className={`relative overflow-hidden ${isFeatured ? "h-56 md:h-64" : "h-40"}`}
+            className={`relative overflow-hidden ${isFeatured ? "h-64 md:h-72" : "h-48"}`}
           >
             <img
               src={imageSrc}
               alt={period.imageAlt || period.title}
-              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
               width={1200}
               height={600}
               loading={index < 2 ? "eager" : "lazy"}
               fetchPriority={index === 0 ? "high" : "auto"}
               decoding="async"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-4">
+            {/* Soft inner shadow ring */}
+            <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)] z-10 pointer-events-none" />
+            
+            {/* Multi-stop refined gradient for maximum legibility without muddying the center */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+            
+            <div className="absolute inset-x-0 bottom-0 p-5 z-20 flex justify-start items-end">
               <Badge
                 variant="secondary"
-                className="text-xs bg-background/70 backdrop-blur-sm border-0 text-muted-foreground"
+                className="text-xs px-3 py-1 font-medium bg-background/80 backdrop-blur-md border border-border/20 text-foreground shadow-sm"
               >
                 {period.era}
               </Badge>

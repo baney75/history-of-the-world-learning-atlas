@@ -1,0 +1,2 @@
+- [x] Fix navigation layout bug in PeriodDetail.tsx
+- [x] Initial project memory scaffold (completed 2026-02-21)

@@ -98,7 +98,13 @@ function readThemePreference(): boolean {
     return false;
   }
 
-  return window.localStorage.getItem(THEME_STORAGE_KEY) === "dark";
+  const storedPref = window.localStorage.getItem(THEME_STORAGE_KEY);
+  if (storedPref) {
+    return storedPref === "dark";
+  }
+  
+  // Default to system preference if no explicit choice was saved
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 
 function readImmersivePreference(): boolean {
@@ -269,6 +275,20 @@ export default function App() {
     document.documentElement.classList.toggle("dark", isDark);
     window.localStorage.setItem(THEME_STORAGE_KEY, isDark ? "dark" : "light");
   }, [isDark]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e: MediaQueryListEvent) => {
+      // Only auto-switch if the user hasn't explicitly set a preference in this session
+      const storedPref = window.localStorage.getItem(THEME_STORAGE_KEY);
+      if (!storedPref) {
+        setIsDark(e.matches);
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   useEffect(() => {
     window.localStorage.setItem(
