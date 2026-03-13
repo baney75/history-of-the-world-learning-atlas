@@ -43,7 +43,7 @@ Find the `export const definitions: Definition[] = [` array and paste this templ
       {
         title: 'Source Title',
         url: 'https://link-to-primary-source.com',
-        type: 'primary' // Options: 'bible', 'primary', 'historical', 'theological'
+        type: 'primary' // Options: 'bible', 'primary', 'historical', 'theological', 'archaeological', 'academic' // Options: 'bible', 'primary', 'historical', 'theological'
       }
     ],
   },
@@ -98,7 +98,7 @@ Find the `const baseHistoricalPeriods: HistoricalPeriod[] = [` array and paste t
       {
         title: 'Source Title',
         url: 'https://link-to-source.com',
-        type: 'primary'
+        type: 'primary' // Options: 'bible', 'primary', 'historical', 'theological', 'archaeological', 'academic'
       }
     ]
   },

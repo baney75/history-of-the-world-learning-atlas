@@ -144,6 +144,7 @@ export function PeriodDetail({
             <img
               src={imageSrc}
               alt={period.imageAlt || period.title}
+              // Per AGENTS.md, use object-top or object-[center_top] to prevent cropping historical subjects
               className="w-full h-full object-cover object-top opacity-[0.85] dark:opacity-[0.65]"
               fetchPriority="high"
             />
