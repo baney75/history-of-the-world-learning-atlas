@@ -143,7 +143,7 @@ export function PeriodDetail({
             <img
               src={imageSrc}
               alt={period.imageAlt || period.title}
-              className="w-full h-full object-cover sm:object-center opacity-[0.85] dark:opacity-[0.65]"
+              className="w-full h-full object-cover object-[center_20%] opacity-[0.85] dark:opacity-[0.65]"
               fetchPriority="high"
             />
             {/* Darker, multi-stop gradient for perfect text contrast on the hero image */}
