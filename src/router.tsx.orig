@@ -1,8 +1,7 @@
-import { createRootRoute, createRoute, createRouter, Link } from '@tanstack/react-router'
+import DefinitionsPage from "./pages/DefinitionsPage"
+import { createRootRoute, createRoute, createRouter } from '@tanstack/react-router'
 
-import App from './App'
-import { FiguresNetwork } from './pages/FiguresNetwork'
-import DefinitionsPage from './pages/DefinitionsPage'
+import { Link } from '@tanstack/react-router'
 
 const NotFound = () => {
   return (
@@ -21,6 +20,9 @@ const NotFound = () => {
     </div>
   )
 }
+
+import App from './App'
+import { FiguresNetwork } from './pages/FiguresNetwork'
 
 const rootRoute = createRootRoute({ notFoundComponent: NotFound })
 

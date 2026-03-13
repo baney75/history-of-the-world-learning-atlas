@@ -1,4 +1,4 @@
-import { test,  } from '@playwright/test';
+import { test } from '@playwright/test';
 
 test('homepage visual regression', async ({ page }) => {
   await page.goto('/');
