@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { BookOpen, Calendar, Users } from "lucide-react";
+import { RichText } from "./RichText";
 
 interface TimelineCardProps {
   period: HistoricalPeriod;
@@ -126,11 +127,7 @@ export function TimelineCard({
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4 pb-5 flex-1 flex flex-col">
-          <p
-            className={`text-sm text-muted-foreground line-clamp-3 leading-relaxed ${isFeatured ? "text-base" : ""}`}
-          >
-            {period.description}
-          </p>
+          <p className={`text-sm text-muted-foreground line-clamp-3 leading-relaxed ${isFeatured ? "text-base" : ""}`}><RichText content={period.description} /></p>
 
           {period.quote && (
             <blockquote className="border-l-2 border-primary/25 pl-3 py-1 mt-auto">

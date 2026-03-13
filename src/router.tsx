@@ -1,86 +1,40 @@
-import { createRootRoute, createRoute, createRouter, Outlet } from '@tanstack/react-router';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import App from '@/App';
-import FiguresPage from '@/pages/FiguresPage';
-import DefinitionsPage from '@/pages/DefinitionsPage';
+import { createRootRoute, createRoute, createRouter } from '@tanstack/react-router'
+import App from './App'
+import { FiguresNetwork } from './pages/FiguresNetwork'
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 1000 * 60 * 60,
-      refetchOnWindowFocus: false,
-    },
-  },
-});
+const rootRoute = createRootRoute()
 
-function RootComponent() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Outlet />
-      <ReactQueryDevtools />
-    </QueryClientProvider>
-  );
-}
-
-const rootRoute = createRootRoute({
-  component: RootComponent,
-});
-
+// We can define a dynamic parameter :periodId to support deep linking to a specific period.
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
   component: App,
-});
+})
 
 const periodRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/period/$periodId',
-});
-
-const figureRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/figure/$figureId',
-});
+  component: App, // App handles the logic if `periodId` is selected, we'll need to adapt it slightly
+})
 
 const figuresRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/figures',
-  component: FiguresPage,
-});
+  component: FiguresNetwork,
+})
 
 const definitionsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/definitions',
-  component: DefinitionsPage,
-});
+  component: () => <div className="p-8">Definitions - Coming Soon</div>,
+})
 
-const definitionDetailRoute = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/definitions/$termId',
-});
+const routeTree = rootRoute.addChildren([indexRoute, periodRoute, figuresRoute, definitionsRoute])
 
-const routeTree = rootRoute.addChildren([
-  indexRoute,
-  periodRoute,
-  figureRoute,
-  figuresRoute,
-  definitionsRoute,
-  definitionDetailRoute,
-]);
-
-// Get base path from Vite's BASE_URL environment variable
-// This is injected at build time by Vite
-declare const __BASE_PATH__: string;
-const basepath = typeof __BASE_PATH__ !== 'undefined' ? __BASE_PATH__ : '/';
-
-export const router = createRouter({ 
-  routeTree,
-  basepath,
-});
+export const router = createRouter({ routeTree })
 
 declare module '@tanstack/react-router' {
   interface Register {
-    router: typeof router;
+    router: typeof router
   }
 }
