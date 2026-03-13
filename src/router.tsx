@@ -1,6 +1,8 @@
-import { createRootRoute, createRoute, createRouter } from '@tanstack/react-router'
+import { createRootRoute, createRoute, createRouter, Link } from '@tanstack/react-router'
 
-import { Link } from '@tanstack/react-router'
+import App from './App'
+import { FiguresNetwork } from './pages/FiguresNetwork'
+import DefinitionsPage from './pages/DefinitionsPage'
 
 const NotFound = () => {
   return (
@@ -19,9 +21,6 @@ const NotFound = () => {
     </div>
   )
 }
-
-import App from './App'
-import { FiguresNetwork } from './pages/FiguresNetwork'
 
 const rootRoute = createRootRoute({ notFoundComponent: NotFound })
 
@@ -47,7 +46,7 @@ const figuresRoute = createRoute({
 const definitionsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/definitions',
-  component: () => <div className="p-8">Definitions - Coming Soon</div>,
+  component: DefinitionsPage,
 })
 
 const routeTree = rootRoute.addChildren([indexRoute, periodRoute, figuresRoute, definitionsRoute])

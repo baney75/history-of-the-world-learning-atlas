@@ -88,7 +88,8 @@ export function TimelineCard({
             <img
               src={imageSrc}
               alt={period.imageAlt || period.title}
-              className="w-full h-full object-cover object-[center_20%] transition-transform duration-1000 ease-out group-hover:scale-110"
+              // Per AGENTS.md, use object-top or object-[center_top] to prevent cropping historical subjects
+              className="w-full h-full object-cover object-top transition-transform duration-1000 ease-out group-hover:scale-110"
               width={1200}
               height={600}
               loading={index < 2 ? "eager" : "lazy"}

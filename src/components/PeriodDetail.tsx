@@ -144,7 +144,8 @@ export function PeriodDetail({
             <img
               src={imageSrc}
               alt={period.imageAlt || period.title}
-              className="w-full h-full object-cover object-[center_20%] opacity-[0.85] dark:opacity-[0.65]"
+              // Per AGENTS.md, use object-top or object-[center_top] to prevent cropping historical subjects
+              className="w-full h-full object-cover object-top opacity-[0.85] dark:opacity-[0.65]"
               fetchPriority="high"
             />
             {/* Darker, multi-stop gradient for perfect text contrast on the hero image */}

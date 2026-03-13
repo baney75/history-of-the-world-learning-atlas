@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 
 test('homepage visual regression', async ({ page }) => {
   await page.goto('/');
@@ -9,7 +9,7 @@ test('homepage visual regression', async ({ page }) => {
 });
 
 test('network page visual regression', async ({ page }) => {
-  await page.goto('/network');
+  await page.goto('/figures');
   await page.waitForTimeout(5000); // give time for vis-network to settle
   await page.screenshot({ path: 'network-page.png', fullPage: true });
 });

@@ -1,6 +1,6 @@
 import { useRef, useEffect, useMemo } from 'react';
 import { DataSet } from 'vis-data';
-import { Network } from 'vis-network';
+import { Network, type Node, type Edge } from 'vis-network';
 import {
   biblicalFigures,
   philosophers,
@@ -32,8 +32,8 @@ export function FiguresNetwork() {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const nodesData: any[] = [];
-    const edgesData: any[] = [];
+    const nodesData: Node[] = [];
+    const edgesData: Edge[] = [];
 
     // Add category nodes
     categories.forEach((cat, index) => {
