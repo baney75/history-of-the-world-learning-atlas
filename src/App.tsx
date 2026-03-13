@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import type { HistoricalPeriod } from "@/types/history";
-import { Book, Moon, Sparkles, Sun, Users, BookOpen } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Book, Moon, Sparkles, Sun, Users, BookOpen, Bookmark, BookmarkCheck } from "lucide-react";
+import { Link, useNavigate, useMatchRoute } from "@tanstack/react-router";
 
 type ViewMode = "timeline" | "detail";
 type NarrativeLens =
@@ -18,11 +18,13 @@ type NarrativeLens =
   | "covenant"
   | "civilizations"
   | "church"
-  | "america";
+  | "america"
+  | "journey";
 type SortMode = "canonical" | "intensity" | "compact";
 
 const THEME_STORAGE_KEY = "history-world.theme";
 const IMMERSIVE_STORAGE_KEY = "history-world.immersive";
+const BOOKMARKS_STORAGE_KEY = "history-world.bookmarks";
 
 const lensOptions: Array<{
   id: NarrativeLens;
@@ -33,6 +35,11 @@ const lensOptions: Array<{
     id: "all",
     label: "Full Canon",
     description: "Trace the complete story from Creation to the present age.",
+  },
+  {
+    id: "journey",
+    label: "My Journey",
+    description: "Your saved and bookmarked historical periods.",
   },
   {
     id: "covenant",
@@ -56,7 +63,7 @@ const lensOptions: Array<{
   },
 ];
 
-const lensPeriodIds: Record<Exclude<NarrativeLens, "all">, string[]> = {
+const lensPeriodIds: Record<Exclude<NarrativeLens, "all" | "journey">, string[]> = {
   covenant: [
     "creation",
     "patriarchal-era",
@@ -97,13 +104,10 @@ function readThemePreference(): boolean {
   if (typeof window === "undefined") {
     return false;
   }
-
   const storedPref = window.localStorage.getItem(THEME_STORAGE_KEY);
   if (storedPref) {
     return storedPref === "dark";
   }
-  
-  // Default to system preference if no explicit choice was saved
   return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 
@@ -111,15 +115,20 @@ function readImmersivePreference(): boolean {
   if (typeof window === "undefined") {
     return false;
   }
-
   return window.localStorage.getItem(IMMERSIVE_STORAGE_KEY) === "1";
 }
 
-function matchesLens(period: HistoricalPeriod, lens: NarrativeLens): boolean {
-  if (lens === "all") {
-    return true;
+function readBookmarksPreference(): string[] {
+  if (typeof window === "undefined") {
+    return [];
   }
+  const stored = window.localStorage.getItem(BOOKMARKS_STORAGE_KEY);
+  return stored ? JSON.parse(stored) : [];
+}
 
+function matchesLens(period: HistoricalPeriod, lens: NarrativeLens, bookmarks: string[]): boolean {
+  if (lens === "all") return true;
+  if (lens === "journey") return bookmarks.includes(period.id);
   return lensPeriodIds[lens].includes(period.id);
 }
 
@@ -176,25 +185,33 @@ function buildLearningPrompt(period: HistoricalPeriod): string {
   if (firstEvent && secondEvent && figureHint) {
     return `Connect ${firstEvent} to ${secondEvent}, then explain how ${figureHint} embodies this period's central lesson.`;
   }
-
   if (firstEvent && secondEvent) {
     return `Compare ${firstEvent} and ${secondEvent}. What changed in worldview, worship, and social order?`;
   }
-
   if (firstEvent) {
     return `Start with ${firstEvent}. Identify the core conflict, the response, and the lasting consequence.`;
   }
-
   return "Identify the dominant worldview in this era, then describe one enduring lesson for Christian discipleship today.";
 }
 
 export default function App() {
-  const [viewMode, setViewMode] = useState<ViewMode>("timeline");
-  const [selectedPeriodId, setSelectedPeriodId] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const matchRoute = useMatchRoute();
+
+  // Use React Router to manage selected period instead of local state
+  // Check if we match the period detail route
+  const isDetailRoute = matchRoute({ to: '/period/$periodId' });
+  // We can't use useParams directly here because App is mapped to both routes in router.tsx.
+  // We'll extract periodId from the path manually or via hook based on current location.
+  // For simplicity, we parse it from window location if matchRoute is true.
+  const routeParams = isDetailRoute ? window.location.pathname.split('/').pop() : null;
+
+  const selectedPeriodId = routeParams || null;
+  const viewMode: ViewMode = selectedPeriodId ? "detail" : "timeline";
+
   const [isDark, setIsDark] = useState<boolean>(readThemePreference);
-  const [immersiveMode, setImmersiveMode] = useState<boolean>(
-    readImmersivePreference,
-  );
+  const [immersiveMode, setImmersiveMode] = useState<boolean>(readImmersivePreference);
+  const [bookmarks, setBookmarks] = useState<string[]>(readBookmarksPreference);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeLens, setActiveLens] = useState<NarrativeLens>("all");
   const [sortMode, setSortMode] = useState<SortMode>("canonical");
@@ -213,7 +230,7 @@ export default function App() {
     const normalizedQuery = searchQuery.trim().toLowerCase();
 
     const lensFiltered = historicalPeriods.filter((period) => {
-      if (!matchesLens(period, activeLens)) {
+      if (!matchesLens(period, activeLens, bookmarks)) {
         return false;
       }
 
@@ -239,11 +256,22 @@ export default function App() {
     return lensFiltered.sort(
       (a, b) => estimateReadMinutes(a) - estimateReadMinutes(b),
     );
-  }, [activeLens, canonicalIndexMap, searchQuery, sortMode]);
+  }, [activeLens, canonicalIndexMap, searchQuery, sortMode, bookmarks]);
 
   const selectedPeriod = selectedPeriodId
     ? getPeriodById(selectedPeriodId)
     : null;
+
+  // Dynamic OG Tags (Addition 9)
+  useEffect(() => {
+    if (selectedPeriod) {
+      document.title = `${selectedPeriod.title} - History of the Western World`;
+      // In a real implementation we would manipulate meta tags here or use react-helmet
+    } else {
+      document.title = `History of the Western World`;
+    }
+  }, [selectedPeriod]);
+
   const selectedInFiltered =
     !!selectedPeriod &&
     filteredPeriods.some((period) => period.id === selectedPeriod.id);
@@ -279,23 +307,22 @@ export default function App() {
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = (e: MediaQueryListEvent) => {
-      // Only auto-switch if the user hasn't explicitly set a preference in this session
       const storedPref = window.localStorage.getItem(THEME_STORAGE_KEY);
       if (!storedPref) {
         setIsDark(e.matches);
       }
     };
-
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem(
-      IMMERSIVE_STORAGE_KEY,
-      immersiveMode ? "1" : "0",
-    );
+    window.localStorage.setItem(IMMERSIVE_STORAGE_KEY, immersiveMode ? "1" : "0");
   }, [immersiveMode]);
+
+  useEffect(() => {
+    window.localStorage.setItem(BOOKMARKS_STORAGE_KEY, JSON.stringify(bookmarks));
+  }, [bookmarks]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -322,7 +349,7 @@ export default function App() {
         event.preventDefault();
         const previous = detailSequence[selectedDetailIndex - 1];
         if (previous) {
-          setSelectedPeriodId(previous.id);
+          navigate({ to: `/period/${previous.id}` });
         }
       }
 
@@ -334,7 +361,7 @@ export default function App() {
         event.preventDefault();
         const next = detailSequence[selectedDetailIndex + 1];
         if (next) {
-          setSelectedPeriodId(next.id);
+          navigate({ to: `/period/${next.id}` });
         }
       }
     };
@@ -347,40 +374,33 @@ export default function App() {
     hasPreviousDetail,
     selectedDetailIndex,
     viewMode,
+    navigate
   ]);
 
   const handleSelectPeriod = (periodId: string) => {
-    setSelectedPeriodId(periodId);
-    setViewMode("detail");
+    navigate({ to: `/period/${periodId}` });
     window.scrollTo({ top: 0, behavior: "auto" });
   };
 
   const handleBack = () => {
-    setViewMode("timeline");
-    setSelectedPeriodId(null);
+    navigate({ to: '/' });
     window.scrollTo({ top: 0, behavior: "auto" });
   };
 
   const handlePreviousPeriod = () => {
-    if (!hasPreviousDetail) {
-      return;
-    }
-
+    if (!hasPreviousDetail) return;
     const previous = detailSequence[selectedDetailIndex - 1];
     if (previous) {
-      setSelectedPeriodId(previous.id);
+      navigate({ to: `/period/${previous.id}` });
       window.scrollTo({ top: 0, behavior: "auto" });
     }
   };
 
   const handleNextPeriod = () => {
-    if (!hasNextDetail) {
-      return;
-    }
-
+    if (!hasNextDetail) return;
     const next = detailSequence[selectedDetailIndex + 1];
     if (next) {
-      setSelectedPeriodId(next.id);
+      navigate({ to: `/period/${next.id}` });
       window.scrollTo({ top: 0, behavior: "auto" });
     }
   };
@@ -392,10 +412,7 @@ export default function App() {
   };
 
   const handleSurpriseMe = () => {
-    if (filteredPeriods.length === 0) {
-      return;
-    }
-
+    if (filteredPeriods.length === 0) return;
     const randomPeriod =
       filteredPeriods[Math.floor(Math.random() * filteredPeriods.length)];
     handleSelectPeriod(randomPeriod.id);
@@ -403,6 +420,13 @@ export default function App() {
 
   const toggleTheme = () => setIsDark((current) => !current);
   const toggleImmersiveMode = () => setImmersiveMode((current) => !current);
+
+  const toggleBookmark = (periodId: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setBookmarks(prev =>
+      prev.includes(periodId) ? prev.filter(id => id !== periodId) : [...prev, periodId]
+    );
+  };
 
   const detailSequenceLabel = selectedInFiltered
     ? activeLensMeta.label
@@ -673,11 +697,23 @@ export default function App() {
                         {filteredPeriods.map((period, index) => {
                           const isFeatured =
                             index % (activeLens === "all" ? 5 : 4) === 0;
+                          const isBookmarked = bookmarks.includes(period.id);
                           return (
                             <li
                               key={period.id}
-                              className={`${isFeatured ? "lg:col-span-6 lg:row-span-2" : "lg:col-span-3"}`}
+                              className={`relative group ${isFeatured ? "lg:col-span-6 lg:row-span-2" : "lg:col-span-3"}`}
                             >
+                              <div className="absolute top-2 right-2 z-30 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <Button
+                                  variant="secondary"
+                                  size="icon"
+                                  className="h-8 w-8 rounded-full bg-background/80 backdrop-blur-md hover:bg-background"
+                                  onClick={(e) => toggleBookmark(period.id, e)}
+                                  title={isBookmarked ? "Remove Bookmark" : "Add Bookmark"}
+                                >
+                                  {isBookmarked ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4 text-muted-foreground" />}
+                                </Button>
+                              </div>
                               <TimelineCard
                                 period={period}
                                 index={index}
