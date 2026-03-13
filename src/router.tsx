@@ -1,3 +1,4 @@
+import DefinitionsPage from "./pages/DefinitionsPage"
 import { createRootRoute, createRoute, createRouter } from '@tanstack/react-router'
 
 import { Link } from '@tanstack/react-router'
@@ -47,7 +48,7 @@ const figuresRoute = createRoute({
 const definitionsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/definitions',
-  component: () => <div className="p-8">Definitions - Coming Soon</div>,
+  component: DefinitionsPage,
 })
 
 const routeTree = rootRoute.addChildren([indexRoute, periodRoute, figuresRoute, definitionsRoute])

@@ -7,10 +7,28 @@ A responsive, interactive timeline application exploring the history of Western 
 *   **Interactive Timeline:** Scroll through historical periods, from Antiquity to the Modern Era.
 *   **Rich Content:** Detailed information on key events, figures, and theological developments.
 *   **Primary Sources:** Links to primary source documents and references for further study.
-*   **Filtering:** Filter the timeline by specific categories (e.g., Biblical History, Church History, American Founding).
-*   **Responsive Design:** Optimized for both desktop and mobile viewing.
-*   **Deep Linking:** Share links to specific historical periods or the figures network.
+*   **Definitions:** A comprehensive dictionary of important theological, political, and historical terms linking to relevant periods.
 *   **Figures Network:** A visualization connecting historical figures and their relationships.
+
+## How to Contribute (For Lay Folk and Students)
+
+We welcome contributions from students, researchers, and anyone passionate about accurate history. You do not need to be a programmer to add content! You can edit the content files directly on GitHub.
+
+### Quick Start Guide to Editing on GitHub
+
+1. Go to the [`src/data/`](src/data) folder in this repository.
+2. Select the file you want to edit:
+   - **`historical-periods.ts`**: To add or edit Historical Periods or Figures.
+   - **`definitions.ts`**: To add or edit Terms and Definitions.
+3. Click the ✏️ (pencil) icon in the top right corner of the file view to start editing.
+4. Add your new content by copying an existing block and filling in the blanks. **Please read `CONTRIBUTING.md` for exact copy-paste templates and rules.**
+5. Scroll to the bottom, write a short description of what you added, and click **Commit changes**.
+
+### Project Rules
+*   **No Wikipedia:** All external links must point to primary sources, credible historical archives, or verified biblical texts (e.g., BibleGateway, CCEL, National Archives).
+*   **Image Sourcing:** If you are adding an image, it must be stored in `public/images/periods/` and use the proper tailwind positioning (`object-cover object-[center_top]`).
+
+Please see our comprehensive [**CONTRIBUTING.md**](CONTRIBUTING.md) for step-by-step instructions and templates.
 
 ## Tech Stack
 
@@ -18,70 +36,25 @@ A responsive, interactive timeline application exploring the history of Western 
 *   **Language:** [TypeScript](https://www.typescriptlang.org/)
 *   **Build Tool:** [Vite](https://vitejs.dev/)
 *   **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
-*   **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
-*   **Routing:** [TanStack Router](https://tanstack.com/router/latest)
-*   **Animations:** [Motion](https://motion.dev/)
 *   **Package Manager:** [Bun](https://bun.sh/)
 
-## Getting Started
+## Running Locally for Developers
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/baney75/history-of-the-world-learning-atlas.git
-    cd history-of-the-world-learning-atlas
-    ```
+If you want to run the project on your own computer:
 
-2.  **Install dependencies:**
-    ```bash
-    bun install
-    ```
-
-3.  **Start the development server:**
-    ```bash
-    bun run dev
-    ```
-    This will start the Vite development server. Open your browser to the local URL provided in the console (usually `http://localhost:5173/`).
-
-## Scripts
-
-*   `bun run dev`: Starts the development server.
-*   `bun run build`: Builds the application for production.
-*   `bun run lint`: Runs ESLint to check for code style and potential errors.
-*   `bun run preview`: Previews the production build locally.
-
-## Project Structure
-
-*   `src/`: Contains the source code for the application.
-    *   `components/`: Reusable React components (e.g., `TimelineCard`, `PeriodDetail`).
-    *   `data/`: Data source for the historical periods and figures (`historical-periods.ts`).
-    *   `pages/`: Main page components (e.g., `FiguresNetwork`).
-    *   `types/`: TypeScript type definitions.
-    *   `App.tsx`: The main application entry point and layout.
-    *   `router.tsx`: Application routing configuration.
-*   `public/images/periods/`: Local image assets for the timeline.
-
-## Data Structure
-
-The application's content is driven by the data in `src/data/historical-periods.ts`. Each period is defined with properties such as:
-
-*   `id`: A unique identifier (kebab-case).
-*   `title`: The title of the period.
-*   `date`: The date range.
-*   `description`: A detailed description.
-*   `imageUrl`: Path to the local image asset.
-*   `imageAlt`: Alternative text for the image.
-*   `category`: The category the period belongs to.
-*   `sources`: Links to relevant primary sources or references.
-
-## Contributing
-
-When contributing to this project, please adhere to the guidelines outlined in the `AGENTS.md` file.
-
-Key points include:
-*   Use verifiable primary sources for historical claims.
-*   Do not use Wikipedia as a source.
-*   Ensure UI changes are verified on both mobile and desktop viewports.
-*   Run the linter and build scripts before submitting changes.
+1. Clone the repository and install dependencies with Bun:
+   ```bash
+   bun install
+   ```
+2. Start the development server:
+   ```bash
+   bun run dev
+   ```
+3. Run the linter and TypeScript compiler before committing:
+   ```bash
+   bun run lint
+   bun run build
+   ```
 
 ## License
 

@@ -32,8 +32,8 @@ export function FiguresNetwork() {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const nodesData: any[] = [];
-    const edgesData: any[] = [];
+    const nodesData: Array<Record<string, unknown>> = [];
+    const edgesData: Array<Record<string, unknown>> = [];
 
     // Add category nodes
     categories.forEach((cat, index) => {
