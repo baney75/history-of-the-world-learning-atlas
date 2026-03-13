@@ -102,6 +102,7 @@ All historical claims must be supported by primary sources (Scripture, archives,
 
 ## Image Rules
 - Store timeline images locally in `public/images/periods/`.
+- Position images correctly using Tailwind classes. Prefer `object-top` or `object-[center_top]` with `object-cover` over default `object-center` so that heads and important details of historical figures are not cropped out.
 - Prefer real historical imagery over generic illustrations.
 - Use compressed assets (web-friendly size) to protect performance.
 - Ensure each image matches its period and can still read clearly at card size.
