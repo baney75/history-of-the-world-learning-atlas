@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
 import { motion, useScroll, useTransform, type Variants } from 'motion/react';
+import { RichText } from './RichText';
 import type { HistoricalPeriod } from '@/types/history';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -215,8 +216,8 @@ export function PeriodDetail({
                 <div className="h-px bg-border flex-1 ml-4 hidden sm:block" />
               </div>
               <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
-                <span className="drop-cap">{period.description.charAt(0)}</span>
-                {period.description.slice(1)}
+                <RichText content={period.description} />
+
               </p>
               
               {period.scripturalContext && (
