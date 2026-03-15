@@ -9,6 +9,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import { TimelineEvent } from './TimelineCard';
 import { ArrowLeft, ChevronLeft, ChevronRight, Compass, ExternalLink, Quote, Users } from 'lucide-react';
+import { resolveAssetUrl } from '@/lib/utils';
 
 interface PeriodDetailProps {
   period: HistoricalPeriod;
@@ -36,18 +37,6 @@ const itemVariants: Variants = {
   hidden: { opacity: 0, y: 12 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
-
-function resolveAssetUrl(url?: string): string | undefined {
-  if (!url) {
-    return undefined;
-  }
-
-  if (url.startsWith('/')) {
-    return `${import.meta.env.BASE_URL}${url.slice(1)}`;
-  }
-
-  return url;
-}
 
 const sourceTypeLabel: Record<HistoricalPeriod['sources'][number]['type'], string> = {
   bible: 'Scripture',
