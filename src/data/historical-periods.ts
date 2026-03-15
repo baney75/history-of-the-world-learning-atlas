@@ -1400,20 +1400,33 @@ export const historicalPeriods: HistoricalPeriod[] = baseHistoricalPeriods.map((
   };
 });
 
+let cachedFigures: HistoricalFigure[] | null = null;
+let figuresMap: Map<string, HistoricalFigure> | null = null;
+
 export function getAllFigures(): HistoricalFigure[] {
-  return [
-    ...biblicalFigures,
-    ...philosophers,
-    ...churchFathers,
-    ...medievalTheologians,
-    ...reformers,
-    ...americanFounders,
-    ...modernFigures
-  ];
+  if (!cachedFigures) {
+    cachedFigures = [
+      ...biblicalFigures,
+      ...philosophers,
+      ...churchFathers,
+      ...medievalTheologians,
+      ...reformers,
+      ...americanFounders,
+      ...modernFigures
+    ];
+  }
+  return cachedFigures;
+}
+
+function getFiguresMap(): Map<string, HistoricalFigure> {
+  if (!figuresMap) {
+    figuresMap = new Map(getAllFigures().map(figure => [figure.id, figure]));
+  }
+  return figuresMap;
 }
 
 export function getFigureById(id: string): HistoricalFigure | undefined {
-  return getAllFigures().find(figure => figure.id === id);
+  return getFiguresMap().get(id);
 }
 
 export function getPeriodById(id: string): HistoricalPeriod | undefined {
