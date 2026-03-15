@@ -42,7 +42,7 @@ export function FiguresNetwork() {
         label: cat.name,
         shape: 'box',
         color: cat.color,
-        font: { color: 'white', size: 16, bold: true },
+        font: { color: 'white', size: 16, bold: 'true' },
         size: 30
       });
 
