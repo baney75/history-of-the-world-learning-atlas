@@ -11,6 +11,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { BookOpen, Calendar, Users } from "lucide-react";
 import { RichText } from "./RichText";
+import { resolveAssetUrl } from "@/lib/utils";
 
 interface TimelineCardProps {
   period: HistoricalPeriod;
@@ -31,18 +32,6 @@ const cardVariants: Variants = {
     },
   }),
 };
-
-function resolveAssetUrl(url?: string): string | undefined {
-  if (!url) {
-    return undefined;
-  }
-
-  if (url.startsWith("/")) {
-    return `${import.meta.env.BASE_URL}${url.slice(1)}`;
-  }
-
-  return url;
-}
 
 export function TimelineCard({
   period,
