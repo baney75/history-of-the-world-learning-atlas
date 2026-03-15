@@ -1,4 +1,4 @@
-import { glossary } from '@/data/glossary';
+import { definitions } from '@/data/definitions';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface RichTextProps {
@@ -6,6 +6,12 @@ interface RichTextProps {
 }
 
 export function RichText({ content }: RichTextProps) {
+  // Build glossary mapping from definitions.ts
+  const glossary = definitions.reduce((acc, def) => {
+    acc[def.term.toLowerCase()] = def.shortDefinition;
+    return acc;
+  }, {} as Record<string, string>);
+
   // Sort glossary keys by length descending so longer phrases match first
   const terms = Object.keys(glossary).sort((a, b) => b.length - a.length);
 
